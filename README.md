@@ -1,1 +1,1 @@
-# spring-school-2016
+# Spring School on Quantitative Methods 2016

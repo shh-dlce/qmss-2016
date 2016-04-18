@@ -1,6 +1,8 @@
 
 # Relational databases
 
+## Introduction
+
 The [software carpentry](http://software-carpentry.org/) lesson on 
 [Databases and SQL](http://swcarpentry.github.io/sql-novice-survey/) describes relational
 databases as
@@ -213,8 +215,8 @@ CREATE TABLE languoids (
 and then insert the data running
 
 ```bash
-$ csvsql --tables languoids --insert -q '"' data/languages-and-dialects-geo.csv
-$ csvsql --tables phonemes --insert -t data/languages-and-dialects-geo.csv
+$ csvsql --tables languoids --insert -q '"' --db=sqlite:///qmss.sqlite data/languages-and-dialects-geo.csv
+$ csvsql --tables phonemes --insert -t --db=sqlite:///qmss.sqlite data/phoible-by-phoneme.tsv 
 ```
 
 
@@ -317,8 +319,37 @@ Querying or selecting rows in a table is done using SQL's `SELECT` command, spec
 fields you want to retrieve and the name of the table, e.g.
 
 ```sql
-SELECT glottocode, name FROM languoids;
+SELECT glottocode, name, macroarea FROM languoids;
 ```
+
+will return results as follows:
+
+<table>
+<TR><TH>glottocode</TH>
+<TH>name</TH>
+<TH>macroarea</TH>
+</TR>
+<TR><TD>aala1237</TD>
+<TD>Aalawa</TD>
+<TD>Papunesia</TD>
+</TR>
+<TR><TD>aant1238</TD>
+<TD>Aantantara</TD>
+<TD>Papunesia</TD>
+</TR>
+<TR><TD>aari1239</TD>
+<TD>Aari</TD>
+<TD>Africa</TD>
+</TR>
+<TR><TD>aasa1238</TD>
+<TD>Aasax</TD>
+<TD>Africa</TD>
+</TR>
+<TR><TD>aata1238</TD>
+<TD>Aatasaara</TD>
+<TD>Papunesia</TD>
+</TR>
+</table>
 
 SQL provides keywords and construct to manipulate queries allowing
 - [sorting](http://swcarpentry.github.io/sql-novice-survey/02-sort-dup.html)
@@ -338,8 +369,30 @@ keyword to remove duplicate rows from the query results.
 SELECT DISTINCT macroarea FROM languoids;
 ```
 
+reults in 
+
+<table>
+<TR><TH>macroarea</TH>
+</TR>
+<TR><TD>Papunesia</TD>
+</TR>
+<TR><TD>Africa</TD>
+</TR>
+<TR><TD>Eurasia</TD>
+</TR>
+<TR><TD>South America</TD>
+</TR>
+<TR><TD>North America</TD>
+</TR>
+<TR><TD>Australia</TD>
+</TR>
+<TR><TD></TD>
+</TR>
+</table>
+
 So there are 6 macroareas associated with languoids. But does each row have a macroarea coded?
-To find out, we need to know a bit about how databases handle [missing data](http://swcarpentry.github.io/sql-novice-survey/05-null.html).
+To find out, we need to know a bit about how databases handle 
+[missing data](http://swcarpentry.github.io/sql-novice-survey/05-null.html).
 A missing value for a field is indicated by `null`, the "null value". To make these values more
 easily visible in the terminal, we can set
 
@@ -359,6 +412,10 @@ Note that `null` is not really a value, though, e.g.
 ```sql
 sqlite> SELECT count(DISTINCT macroarea) FROM languoids;
 6
+sqlite> select count(*) from languoids where macroarea = null;
+0
+sqlite> select count(*) from languoids where macroarea is null;
+60
 ```
 
 We have used the aggregation function `count` to aggregate information from all rows of the
@@ -404,6 +461,33 @@ GROUP BY
     InventoryID, LanguageCode;
 ```
 
+<table>
+<TR><TH>InventoryID</TH>
+<TH>LanguageCode</TH>
+<TH>tones</TH>
+</TR>
+<TR><TD>-410</TD>
+<TD>sef</TD>
+<TD>3</TD>
+</TR>
+<TR><TD>-375</TD>
+<TD>bva</TD>
+<TD>2</TD>
+</TR>
+<TR><TD>-374</TD>
+<TD>bva</TD>
+<TD>3</TD>
+</TR>
+<TR><TD>-373</TD>
+<TD>bva</TD>
+<TD>3</TD>
+</TR>
+<TR><TD>-372</TD>
+<TD>bva</TD>
+<TD>3</TD>
+</TR>
+</table>
+
 A convenient way to store intermediate results (in a dynamic way) is via views, which behave
 much like tables:
 
@@ -423,10 +507,29 @@ So what do we know about the number of tones per language? We can use a couple m
 aggregation functions to find out:
 
 ```sql
-sqlite> SELECT min(tones), max(tones), avg(tones), sum(tones)/cast(count(tones) as float) FROM tones;
-1|10|3.37310924369748|3.37310924369748
+SELECT min(tones), max(tones), avg(tones), sum(tones)/cast(count(tones) as float) FROM tones;
 ```
 
+yielding
+
+<table>
+<TR><TH>min(tones)</TH>
+<TH>max(tones)</TH>
+<TH>avg(tones)</TH>
+<TH>sum(tones)/cast(count(tones) as float)</TH>
+</TR>
+<TR><TD>1</TD>
+<TD>10</TD>
+<TD>3.37310924369748</TD>
+<TD>3.37310924369748</TD>
+</TR>
+</table>
+
+Notes:
+- SQLite undertands the usual arithmetic operators `+ - * /` to calculate new values.
+- Fields are typed and operators or functions typically do not coerce their arguments into the
+  required types. So the `cast` function is used above to make sure we are applying floating
+  point division, rather than integer division (with remainder).
 
 We can only combine information from two tables if they have something in common. In our case,
 `languoids.isocodes` stores (potentially multiple) ISO codes associated with a lnaguoid, and
@@ -442,12 +545,12 @@ Ok, so there is at most one three-letter ISO code per languoid. Let's see if the
 are all distinct:
 
 ```
-sqlite> select count(*) from languoids where length(isocodes) = 3;
+sqlite> SELECT count(*) FROM languoids WHERE length(isocodes) = 3;
 7361
 ```
 
 ```
-sqlite> select count(distinct isocodes) from languoids where length(isocodes) = 3;
+sqlite> SELECT count(distinct isocodes) FROM languoids WHERE length(isocodes) = 3;
 7361
 ```
 
@@ -465,14 +568,32 @@ ON
     isocodes = LanguageCode;
 ```
 
-```sql
-sqlite> SELECT macroarea, name, isocodes FROM languoids JOIN tones ON isocodes = LanguageCode ORDER BY name LIMIT 5;
-Africa|Abar|mij
-Africa|Abidji|abi
-Africa|Abua|abn
-Africa|Abure|abu
-Africa|Acoli|ach
-```
+<table>
+<TR><TH>macroarea</TH>
+<TH>name</TH>
+<TH>isocodes</TH>
+</TR>
+<TR><TD>Africa</TD>
+<TD>Abar</TD>
+<TD>mij</TD>
+</TR>
+<TR><TD>Africa</TD>
+<TD>Abidji</TD>
+<TD>abi</TD>
+</TR>
+<TR><TD>Africa</TD>
+<TD>Abua</TD>
+<TD>abn</TD>
+</TR>
+<TR><TD>Africa</TD>
+<TD>Abure</TD>
+<TD>abu</TD>
+</TR>
+<TR><TD>Africa</TD>
+<TD>Acoli</TD>
+<TD>ach</TD>
+</TR>
+</table>
 
 Finally, we can group by macroarea to get the distribution we wanted to calculate:
 
@@ -493,13 +614,26 @@ ORDER BY
 
 Resulting in:
 
-```
-Africa|528
-Eurasia|28
-North America|19
-Papunesia|7
-South America|6
-```
+<table>
+<TR><TH>macroarea</TH>
+<TH>tone_languages</TH>
+</TR>
+<TR><TD>Africa</TD>
+<TD>528</TD>
+</TR>
+<TR><TD>Eurasia</TD>
+<TD>28</TD>
+</TR>
+<TR><TD>North America</TD>
+<TD>19</TD>
+</TR>
+<TR><TD>Papunesia</TD>
+<TD>7</TD>
+</TR>
+<TR><TD>South America</TD>
+<TD>6</TD>
+</TR>
+</table>
 
 Which - when [compared with WALS](http://wals.info/feature/13A?v1=a000) - seems to be a plausible result:
 

@@ -154,17 +154,27 @@ in [this repository](data/).
 
 #### Using SQLite Manager
 
+Unfortunately the CSV import of SQLite Manager (0.8.3) does not handle single quotes in the
+data well. The single quote `'` is a delimiter in SQL, thus has to be escaped as `\'` when
+used within string literals in SQL. So before importing the data from Glottolog into SQLite Manager,
+we need to fix this:
+
+```
+$ python
+Python 3.4.3 (default, Oct 14 2015, 20:28:29)
+>>> c = open('data/languages-and-dialects-geo.csv', encoding='utf8').read()
+>>> with open('data/languages-and-dialects-geo-quoted.csv', 'w', encoding='utf8') as fp:
+...   fp.write(c.replace("'", "\\'"))
+... 
+```
+
 Choose
-
 > Database -> New Database 
-
 then give a name and directory where to store the DB.
 
 Then
-
 > Database -> Import
-
-in the *Import Wizard* pane input the data shown below
+will open the *Import Wizard* pane, where you input the data shown below
 
 ![SQLite Manager Import Wizard for languoids](images/sqlitemanager-qmss-import-languoids.png)
 
@@ -175,7 +185,6 @@ You are then prompted to edit the table's schema
 After importing the data, you should be able to browse the table:
 
 ![SQLite Manager Import browse languoids](images/sqlitemanager-qmss-languoids-browse.png)
-
 
 Same for phonemes, select VARCHAR for all!
 
@@ -282,6 +291,8 @@ Each row in the `languoids` table contains information about a different languag
 Each row in the `phonemes` table contains information about one phoneme encountered in a phoneme
 inventory associated with a language.
 
+Database fields are explicitely typed (as opposed to columns in CSV files).
+
 
 ### Querying the database
 
@@ -293,7 +304,7 @@ SQLite version 3.8.2 2013-12-06 14:53:30
 Enter ".help" for instructions
 Enter SQL statements terminated with a ";"
 sqlite> SELECT count(*) FROM languoids;
-18049
+18357
 ```
 
 or by typing SQL
@@ -366,7 +377,7 @@ So a phoneme is coded as being associated with tone by a value of `+`.
 How many of these are there?
 
 ```sql
-sqlite> select count(*) from phonemes where tone = '+';
+sqlite> SELECT count(*) FROM phonemes WHERE tone = '+';
 2007
 ```
 
@@ -375,7 +386,7 @@ We used a `WHERE` clause to filter the set of phonemes by a certain value for on
 In how many languages do they occur?
 
 ```sql
-sqlite> select count(distinct LanguageCode) from phonemes where tone = '+';
+sqlite> SELECT count(distinct LanguageCode) FROM phonemes WHERE tone = '+';
 526
 ```
 
@@ -423,7 +434,7 @@ We can only combine information from two tables if they have something in common
 further investigate the values in `languoids.isocodes`:
 
 ```
-sqlite> select max(length(isocodes)) from languoids;
+sqlite> SELECT max(length(isocodes)) FROM languoids;
 3
 ```
 
@@ -432,12 +443,12 @@ are all distinct:
 
 ```
 sqlite> select count(*) from languoids where length(isocodes) = 3;
-7240
+7361
 ```
 
 ```
 sqlite> select count(distinct isocodes) from languoids where length(isocodes) = 3;
-7240
+7361
 ```
 
 Good! Having established that `languoids.isocodes` does only hold unique three-letter
@@ -483,8 +494,8 @@ ORDER BY
 Resulting in:
 
 ```
-Africa|516
-Eurasia|26
+Africa|528
+Eurasia|28
 North America|19
 Papunesia|7
 South America|6

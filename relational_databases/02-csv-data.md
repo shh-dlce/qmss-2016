@@ -25,12 +25,6 @@ $ csvstat -q '"' data/languages-and-dialects-geo.csv
 	<class 'str'>
 	Nulls: True
 	Unique values: 18227
-	5 most frequent values:
-		Gova:	3
-		Yana:	2
-		Iko:	2
-		Unggumi:	2
-		Hamba:	2
 	Max length: 58
   3. isocodes
 	<class 'str'>
@@ -57,17 +51,10 @@ $ csvstat -q '"' data/languages-and-dialects-geo.csv
 	Nulls: True
 	Min: -55.2748
 	Max: 73.1354
-	Sum: 57961.53543824342
 	Mean: 7.874138763516291
 	Median: 6.08134
 	Standard Deviation: 18.678027079778794
-	Unique values: 7204
-	5 most frequent values:
-		23.6818:	10
-		40.0:	5
-		21.8375:	5
-		23.086:	5
-		25.0:	4
+	...
   7. longitude
 	<class 'float'>
 	Nulls: True
@@ -77,13 +64,7 @@ $ csvstat -q '"' data/languages-and-dialects-geo.csv
 	Mean: 50.6539007253226
 	Median: 45.152856
 	Standard Deviation: 81.61051507133911
-	Unique values: 7162
-	5 most frequent values:
-		107.184:	10
-		107.362:	5
-		103.464:	5
-		10.2166:	4
-		142.462:	4
+    ...
 
 Row count: 18357
 ```
@@ -96,4 +77,6 @@ Notes:
 - Running csvstat on the 8.2 MB PHOIBLE file with 75,388 rows takes > 10 secs on a pretty fast
   machine.
 
+## Next section
 
+[Importing CSV data](03-importing-csv.md)

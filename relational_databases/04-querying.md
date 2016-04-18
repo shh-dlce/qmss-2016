@@ -114,9 +114,9 @@ Note that `null` is not really a value, though, e.g.
 ```sql
 sqlite> SELECT count(DISTINCT macroarea) FROM languoids;
 6
-sqlite> select count(*) from languoids where macroarea = null;
+sqlite> SELECT count(*) FROM languoids WHERE macroarea = null;
 0
-sqlite> select count(*) from languoids where macroarea is null;
+sqlite> SELECT count(*) FROM languoids WHERE macroarea is null;
 60
 ```
 
@@ -355,6 +355,8 @@ Notes:
 - There is no defined default ordering of rows returned by a query. So you should always specify
   an explicit order to make query results replicable.
 - SQL commands are terminated with a semicolon.
-
-
-
+- The fields or values to be selected as well as the tables or expressions from which to select
+  can be aliased using `AS`, to allow referencing from other parts of a query.
+- SQL provides a standardized, somewhat portable way to declaratively describe data manipulation.
+  In our example, the final query is arguably more readable and maintainable than equivalent
+  code in a procedural language like python or R.

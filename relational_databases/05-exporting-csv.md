@@ -8,25 +8,54 @@ sqlite3 supports export to CSV as follows:
 sqlite> .header on
 sqlite> .mode csv
 sqlite> .output macroareas.csv
-sqlite> select macroarea, count(glottocode) as c from languoids where level = 'language' group by macroarea order by c desc;
+sqlite> SELECT * FROM dataset;
 sqlite> .output stdout
 ```
 
 ## Using SQLite Manager
 
-To export the results of a query with SQLite Manager we can again make use of a `VIEW`:
-
-> View -> Create View
-
-![SQLite Manager](images/sqlitemanager-create-view-tone_languages_by_macroarea.png)
-
-Then 
-
+Choose
 > View -> Export View
 
 ![SQLite Manager export](images/sqlitemanager-export.png)
 
 Configure the export, click "OK", select an output file and enjoy!
 
-This CSV file could easily be converted to GeoJSON using a service such as [csv2geojson](http://mapbox.github.io/csv2geojson/)
+
+## What's next?
+
+This CSV file could easily be converted to GeoJSON using a service such as 
+[csv2geojson](http://mapbox.github.io/csv2geojson/)
 for [basic visualization on a map](data/dataset.geojson).
+
+With a bit more work in python this can be turned into a 
+[visualization](data/dataset2.geojson) of
+- geography
+- precipitation (via marker colors)
+- tonality (via marker icons)
+
+![Dataset on map](images/dataset.png)
+
+```python
+import json
+import colorsys
+
+def color(val, minval, maxval):
+    h = (float(val-minval) / (maxval-minval)) * 120
+    rgb = [hex(int(255 * x)) for x in colorsys.hsv_to_rgb(h/360, 1., 1.)]
+    return ''.join(x[2:].upper().rjust(2, '0') for x in rgb)
+
+def updated(d):
+    precipitation = [float(f['properties']['precipitation']) for f in d['features']]
+    for f in d['features']:
+        props = f['properties']
+        props['marker-size'] = 'small'
+        props['marker-symbol'] = min([int(props['tones']), 9])
+        props['marker-color'] = '#' + color(float(props['precipitation']), min(precipitation), max(precipitation))
+    return d
+
+with open('dataset.geojson') as fp:
+    d = json.load(fp)
+with open('dataset2.geojson', 'w') as fp:
+    json.dump(updated(d), fp, indent=4)
+```

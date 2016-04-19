@@ -28,3 +28,5 @@ Then
 
 Configure the export, click "OK", select an output file and enjoy!
 
+This CSV file could easily be converted to GeoJSON using a service such as [csv2geojson](http://mapbox.github.io/csv2geojson/)
+for [basic visualization on a map](data/dataset.geojson).

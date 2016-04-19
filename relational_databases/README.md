@@ -10,12 +10,13 @@ The tutorial requires
 We will use the following data:
 - [Glottolog languages and dialects](data/languages-and-dialects-geo.csv) downloaded from http://glottolog.org/static/download/2.7/languages-and-dialects-geo.csv
 - [PHOIBLE phoneme data](data/phoible-by-phoneme.tsv) downloaded from https://raw.githubusercontent.com/phoible/dev/master/data/phoible-by-phoneme.tsv
+- [Ecological data from D-PLACE](data/dplace-societies-2016-4-19.csv)
 
 The tutorial is organized in a way that may resemble a typical usage for relational databases
 in a research setting: Starting with a question
 
-> How are [tone languages](https://simple.wikipedia.org/wiki/Tone_language)
-> distributed across [Glottolog macroareas](http://glottolog.org/meta/glossary#macroarea)?
+> Does our data allow any insight regarding the debate about effects of aridity/humidity on
+> [tonality of languages](https://simple.wikipedia.org/wiki/Tone_language)?
 
 we inspect available data, then procede to load this data into a relational database for further
 processing, and finally export a dataset in CSV from the database which may serve as the basis for

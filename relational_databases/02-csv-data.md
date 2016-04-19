@@ -1,7 +1,11 @@
 # CSV data
 
-We downloaded a CSV file containing data about languages and dialects from Glottolog and
-a TSV file containing the PHOIBLE database on phoneme inventories (see [README](data/README.md)).
+We downloaded a CSV file containing data about languages and dialects from Glottolog,
+a TSV file containing the PHOIBLE database on phoneme inventories and a CSV file
+listing values for monthly mean precipitation from D-PLACE (see [README](data/README.md)).
+
+
+## The Glottolog data
 
 Let's do a crude size estimate of the Glottolog data, counting the lines in the file:
 
@@ -76,6 +80,39 @@ Notes:
   were detected as containing floating point numbers.
 - Running csvstat on the 8.2 MB PHOIBLE file with 75,388 rows takes > 10 secs on a pretty fast
   machine.
+
+
+## The PHOIBLE data
+
+The data from PHOIBLE lists each single phoneme found in any phoneme inventory aggregated by
+PHOIBLE. There may be more than one inventories per language. Quoting from the PHOIBLE site:
+
+> The 2014 edition includes 2155 inventories that contain 2160 segment types found in 1672 distinct languages.
+
+Note that this data file separates values in rows by a tab `\t`, which is a common variant of 
+delimiter-separated values.
+
+
+## The D-PLACE data
+
+The D-PLACE data showcases a shortcoming of the CSV format: There is no standard or straightforward
+way of associating metadata with the data. One way to handle this is by packaging the data file with
+a metadata file using a container format like `zip` 
+(see for example the [WALS dataset](http://wals.info/static/download/wals-language.csv.zip)).
+Alternatively, metadata can be included in the data file, which unfortunately forces some preprocessing.
+
+D-PLACE has chosen the latter alternative, as can be seen by taking a peek at the data:
+
+```bash
+$ head -n 3 data/dplace-societies-2016-4-19.csv 
+"Research that uses data from D-PLACE should cite both the original source(s) of  the data and the paper by Kirby et al. in which D-PLACE was first presented  (e.g., research using cultural data from the Binford Hunter-Gatherer dataset: ""Binford (2001);  Binford and Johnson (2006); Kirby et al. Submitted)."" The reference list should include the date data were  accessed and URL for D-PLACE (http://d-place.org), in addition to the full references for Binford (2001),  Binford and Johnson (2006), and Kirby et al. Submitted."
+Source,Preferred society name,Society id,Cross-dataset id,Original society name,Revised latitude,Revised longitude,Original latitude,Original longitude,Glottolog language/dialect id,Glottolog language/dialect name,ISO code,Language family,Variable: Monthly Mean Precipitation (mm),Comment: Monthly Mean Precipitation (mm)
+Ethnographic Atlas,!Kung,Aa1,xd1,Kung (Aa1),-20.0,21.0,-20.0,21.0,juho1239,Ju'hoan,ktz,Kxa,33.978,
+```
+
+A preprocessed version of the file, with citation notice removed and whitespace in column 
+names replaced is available [in the repository](data/dplace-societies-2016-4-19-clean.csv).
+
 
 ## Next section
 

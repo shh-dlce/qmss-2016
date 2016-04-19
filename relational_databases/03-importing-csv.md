@@ -68,12 +68,13 @@ and then insert the data running
 ```bash
 $ csvsql --tables languoids --insert -q '"' --db=sqlite:///qmss.sqlite data/languages-and-dialects-geo.csv
 $ csvsql --tables phonemes --insert -t --db=sqlite:///qmss.sqlite data/phoible-by-phoneme.tsv 
+$ csvsql --tables precipitation --insert --db=sqlite:///qmss.sqlite data/dplace-socieites-2016-4-19-clean.csv
 ```
 
 
 ## Summary
 
-We now have an sqlite database containing two tables `languoids` and `phonemes` defined as
+We now have an sqlite database containing three tables `languoids`, `phonemes` and `precipitation` defined as
 
 ```sql
 CREATE TABLE languoids (
@@ -139,9 +140,35 @@ CREATE TABLE phonemes (
 );
 ```
 
-Each row in the `languoids` table contains information about a different language or dialect.
+and 
 
-Each row in the `phonemes` table contains information about one phoneme encountered in a phoneme
-inventory associated with a language.
+```sql
+CREATE TABLE precipitation (
+	"Source" VARCHAR(23) NOT NULL, 
+	"Preferred_society_name" VARCHAR(38) NOT NULL, 
+	"Society_id" VARCHAR(5) NOT NULL, 
+	"Cross_dataset_id" VARCHAR(6) NOT NULL, 
+	"Original_society_name" VARCHAR(42) NOT NULL, 
+	"Revised_latitude" FLOAT NOT NULL, 
+	"Revised_longitude" FLOAT NOT NULL, 
+	"Original_latitude" FLOAT NOT NULL, 
+	"Original_longitude" FLOAT NOT NULL, 
+	glottocode VARCHAR(8), 
+	"Glottolog_name" VARCHAR(43), 
+	"ISO_code" VARCHAR(4), 
+	"Language_family" VARCHAR(24), 
+	"Precipitation" FLOAT NOT NULL, 
+	"Comment_Monthly_Mean_Precipitation" VARCHAR(127)
+);
+```
 
-Database fields are explicitely typed (as opposed to columns in CSV files).
+Notes:
+- Each row in the `languoids` table contains information about a different language or dialect.
+- Each row in the `phonemes` table contains information about one phoneme encountered in a phoneme
+  inventory associated with a language.
+- Database fields are explicitly typed (as opposed to columns in CSV files).
+
+
+## Next section
+
+[Querying the database](04-querying.md)

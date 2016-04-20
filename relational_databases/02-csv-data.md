@@ -96,11 +96,15 @@ PHOIBLE. There may be more than one inventories per language. Quoting from the P
 Note that this data file separates values in rows by a tab `\t`, which is a common variant of 
 delimiter-separated values.
 
-http://phoible.org/contributors/UPSID
+From the [PHOIBLE site](http://phoible.org/contributors/UPSID) we learn that
 
 > UPSID inventories contain no descriptions of tone.
 
-http://phoible.org/inventories?sSearch_6=UCLA%20Phonological%20Segment%20Inventory%20Database
+thus, these inventories must be ignored when analyzing the distribution of tone languages.
+(Erroneously including UPSID inventories does have an impact on the analysis as can
+be gleaned from 
+[this commit](https://github.com/shh-dlce/qmss-2016/commit/7cf7976d92db675d95dac6412c2a80a8edee6137).)
+
 
 ```
 (qmss2016)dlt5502178l:~/venvs/qmss2016/qmss-2016/relational_databases$ csvstat -t data/phoible-by-phoneme.tsv 

@@ -68,7 +68,7 @@ and then insert the data running
 ```bash
 $ csvsql --tables languoids --insert -q '"' --db=sqlite:///qmss.sqlite data/languages-and-dialects-geo.csv
 $ csvsql --tables phonemes --insert -t --db=sqlite:///qmss.sqlite data/phoible-by-phoneme.tsv 
-$ csvsql --tables precipitation --insert --db=sqlite:///qmss.sqlite data/dplace-socieites-2016-4-19-clean.csv
+$ csvsql --tables precipitation --insert --db=sqlite:///qmss.sqlite data/dplace-societies-2016-4-19-clean.csv
 ```
 
 

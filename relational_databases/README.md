@@ -29,3 +29,4 @@ further analysis.
 3. [Importing CSV data](03-importing-csv.md)
 4. [Querying SQL databases](04-querying.md)
 5. [Exporting CSV data](05-exporting-csv.md)
+6. [What's next](06-whats-next.md)

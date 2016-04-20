@@ -141,6 +141,13 @@ sqlite> SELECT count(*) FROM phonemes WHERE tone = '+';
 ```
 
 We used a `WHERE` clause to filter the set of phonemes by a certain value for one field.
+While the field descriptions following the `SELECT` keyword specify a filtering of the
+fields of result rows, the `WHERE` clause filters result rows from the set of all rows
+defined after the `FROM` keyword:
+
+![SQL filter](images/sql-filter.svg)
+
+<small>Image taken from [software carpentry](http://swcarpentry.github.io/sql-novice-survey/03-filter.html)</small>
 
 In how many languages do they occur?
 
@@ -196,6 +203,11 @@ ORDER BY tones DESC;
 <TD>9</TD>
 </TR>
 </table>
+
+`GROUP BY` can be thought of as process consisting of
+- **splitting** the data into groups based on some criteria,
+- **applying** a function to each group independently. Typically this function
+  aggregates the data in the rows of one group.
 
 To check our assumption that tones are coded with a `+` value for the field `tone`,
 we compare this with the [PHOIBLE website](http://phoible.org/inventories):

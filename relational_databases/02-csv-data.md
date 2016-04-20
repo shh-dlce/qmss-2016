@@ -93,14 +93,11 @@ PHOIBLE. There may be more than one inventories per language. Quoting from the P
 
 > The 2014 edition includes 2155 inventories that contain 2160 segment types found in 1672 distinct languages.
 
-Note that this data file separates values in rows by a tab `\t`, which is a common variant of 
-delimiter-separated values.
-
-From the [PHOIBLE site](http://phoible.org/contributors/UPSID) we learn that
+From the [PHOIBLE site](http://phoible.org/contributors/UPSID) we also learn that
 
 > UPSID inventories contain no descriptions of tone.
 
-thus, these inventories must be ignored when analyzing the distribution of tone languages.
+Thus, these inventories must be ignored when analyzing the distribution of tone languages.
 (Erroneously including UPSID inventories does have an impact on the analysis as can
 be gleaned from 
 [this commit](https://github.com/shh-dlce/qmss-2016/commit/7cf7976d92db675d95dac6412c2a80a8edee6137).)
@@ -167,9 +164,11 @@ Row count: 75388
 ```
 
 Notes:
+- This data file separates values in rows by a tab `\t`, which is a common variant of 
+  delimiter-separated values.
 - The `LanguageCode` field looks like it holds exactly one ISO 639-3 language identifier.
 - UPSID inventories are identified by a value of `upsid` for the `Source` field.
-- Running csvstat on the 8.2 MB PHOIBLE file with 75,388 rows takes > 10 secs on a pretty fast
+- Running `csvstat` on this 8.2 MB file with 75,388 rows takes > 10 secs on a pretty fast
   machine.
 
 

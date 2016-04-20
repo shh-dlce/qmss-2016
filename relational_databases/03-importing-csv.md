@@ -39,14 +39,16 @@ After importing the data, you should be able to browse the table:
 
 ![SQLite Manager Import browse languoids](images/sqlitemanager-qmss-languoids-browse.png)
 
-Same for phonemes, select VARCHAR for all!
+We apply the same procdure to the PHOIBLE data (selecting `VARCHAR` as column type for all fields):
 
 ![SQLite Manager Import Wizard for languoids](images/sqlitemanager-qmss-phonemes-import.png)
+
+and the D-PLACE data.
 
 
 ## Using csvkit
 
-Doing this with csvkit's `csvsql` command is easy.
+Importing CSV data into a relational database using csvkit's `csvsql` command is easy.
 
 We can take a peek at the table csvkit is going to create, running
 

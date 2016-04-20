@@ -7,7 +7,6 @@ bili1260,Bilin,Africa,15.7833,38.3917,Afro-Asiatic,15.9045,0
 bora1271,"Borana-Arsi-Guji Oromo",Africa,1.05676,37.882,Afro-Asiatic,72.46916667,0
 burj1242,Burji,Africa,4.44624,38.4646,Afro-Asiatic,73.702,0
 cent2194,"Central Atlas Tamazight",Africa,32.7415,-2.40872,Afro-Asiatic,35.69316667,0
-dera1248,"Dera (Nigeria)",Africa,10.072,12.0256,Afro-Asiatic,72.78,0
 egyp1253,"Egyptian Arabic",Africa,31.0,31.0,Afro-Asiatic,2.912166667,0
 gude1246,Gude,Africa,10.2138,13.403,Afro-Asiatic,71.49566667,2
 haus1257,Hausa,Africa,11.1513,8.7804,Afro-Asiatic,34.98683333,3
@@ -18,7 +17,6 @@ lagw1237,Lagwan,Africa,11.5592,14.9884,Afro-Asiatic,43.4635,2
 liby1240,"Libyan Arabic",Africa,22.0032,15.0014,Afro-Asiatic,15.3375,0
 marg1265,"Marghi Central",Africa,10.8385,12.9952,Afro-Asiatic,54.416,2
 ngas1240,Ngas,Africa,9.32042,9.46146,Afro-Asiatic,105.3676667,3
-ngiz1242,Ngizim,Africa,12.1051,11.0178,Afro-Asiatic,52.9575,0
 nucl1695,"Nuclear Bole",Africa,11.4839,11.2322,Afro-Asiatic,63.45533333,0
 park1239,Parkwa,Africa,11.0206,14.0964,Afro-Asiatic,54.61716667,0
 qima1242,Qimant,Africa,12.8119,37.0542,Afro-Asiatic,101.199,4
@@ -26,13 +24,11 @@ seba1251,"Sebat Bet Gurage",Africa,8.11879,37.9891,Afro-Asiatic,110.5235,0
 sida1246,Sidamo,Africa,6.74176,38.3729,Afro-Asiatic,89.64216667,0
 siwi1239,Siwi,Africa,29.2023,25.5197,Afro-Asiatic,1.115166667,0
 tari1263,Tarifit,Africa,35.3281,-1.87354,Afro-Asiatic,38.35516667,0
-tera1251,Tera,Africa,11.0376,11.8095,Afro-Asiatic,58.96883333,0
 tigr1271,Tigrinya,Africa,15.3359,38.9266,Afro-Asiatic,48.61716667,0
 tsam1247,Tsamai,Africa,5.3097,36.9139,Afro-Asiatic,53.38333333,2
 ainu1240,"Ainu (Japan)",Eurasia,43.633654,142.46167,Ainu,101.7826667,0
 east2542,"Eastern Ojibwa","North America",45.0112,-79.7503,Algic,62.0545,0
 shaw1249,Shawnee,"North America",35.354,-96.7635,Algic,107.1508333,0
-wiyo1248,Wiyot,"North America",39.2492,-122.952,Algic,102.80925,0
 yuro1248,Yurok,"North America",41.3262,-123.824,Algic,112.4448333,0
 mapu1245,Mapudungun,"South America",-38.7392,-71.277,Araucanian,7.888333333,0
 asha1243,"Asháninka","South America",-11.9311,-73.9073,Arawakan,165.0338333,0
@@ -47,12 +43,10 @@ wapi1253,Wapishana,"South America",2.58744,-59.8021,Arawakan,140.4273333,0
 wayu1243,Wayuu,"South America",10.2252,-71.8101,Arawakan,102.2256667,0
 yine1238,Yine,"South America",-11.1086,-73.3087,Arawakan,92.90633333,0
 chip1261,Chipewyan,"North America",58.3637,-110.832,Athapaskan-Eyak-Tlingit,30.89741667,4
-eyak1241,Eyak,"North America",60.4232,-144.762,Athapaskan-Eyak-Tlingit,122.9195,0
 hupa1239,Hupa,"North America",41.0982,-123.68,Athapaskan-Eyak-Tlingit,98.22358335,0
 jica1244,"Jicarilla Apache","North America",36.8079,-107.007,Athapaskan-Eyak-Tlingit,27.211,3
 mesc1238,"Mescalero-Chiricahua Apache","North America",33.1291,-105.566,Athapaskan-Eyak-Tlingit,26.39861111,4
 nava1243,Navajo,"North America",36.2106,-110.082,Athapaskan-Eyak-Tlingit,14.67383333,2
-tlin1245,Tlingit,"North America",59.4447,-135.29,Athapaskan-Eyak-Tlingit,159.6223333,0
 tolo1259,Tolowa,"North America",41.9192,-124.1,Athapaskan-Eyak-Tlingit,124.81341665,0
 abur1243,Abure,Africa,5.21534,-3.64123,Atlantic-Congo,130.7555,2
 adam1253,"Adamawa Fulfulde",Africa,8.140326,13.077338,Atlantic-Congo,107.3405,0
@@ -89,7 +83,6 @@ doya1240,Doyayo,Africa,8.68604,13.0768,Atlantic-Congo,82.69566667,4
 dual1243,Duala,Africa,4.10208,9.61877,Atlantic-Congo,203.5083333,5
 duru1249,Duruma,Africa,-4.09629,39.322,Atlantic-Congo,84.90366667,2
 ebir1243,Ebira,Africa,8.15516,7.06183,Atlantic-Congo,107.0431667,3
-efik1245,Efik,Africa,4.89379,8.38121,Atlantic-Congo,224.8988333,0
 ejag1239,Ejagham,Africa,5.54442,8.90959,Atlantic-Congo,180.6758333,4
 eloy1241,Eloyi,Africa,8.24696,7.97061,Atlantic-Congo,112.0075,3
 fang1246,"Fang (Equatorial Guinea)",Africa,1.72397,11.6145,Atlantic-Congo,150.85,0
@@ -106,7 +99,6 @@ here1253,Herero,Africa,-21.0231,20.5655,Atlantic-Congo,28.47883333,2
 ibib1240,Ibibio,Africa,5.15279,7.86688,Atlantic-Congo,224.8988333,2
 idom1241,Idoma,Africa,7.19139,7.71261,Atlantic-Congo,136.4635,5
 ifee1241,"Ifè",Africa,7.63568,1.58494,Atlantic-Congo,125.5521667,3
-isok1239,Isoko,Africa,5.52889,6.24682,Atlantic-Congo,195.2455,0
 jola1263,Jola-Fonyi,Africa,12.7575,-15.7355,Atlantic-Congo,120.6261667,0
 kabi1261,"Kabiyé",Africa,8.96816,0.495023,Atlantic-Congo,93.211,2
 kagu1239,Kagulu,Africa,-6.38204,37.0534,Atlantic-Congo,73.72616667,0
@@ -116,7 +108,6 @@ kele1255,"Kele (Democratic Republic of Congo)",Africa,0.36906,24.3098,Atlantic-C
 keny1279,Kenyang,Africa,5.58288,9.55918,Atlantic-Congo,191.9998333,0
 kiku1240,Kikuyu,Africa,-0.29005,36.719,Atlantic-Congo,57.67833333,0
 kiny1244,Kinyarwanda,Africa,-1.56771,29.6441,Atlantic-Congo,75.04966667,0
-klao1243,Klao,Africa,6.87233,-10.9214,Atlantic-Congo,239.2148333,0
 komc1235,"Kom (Cameroon)",Africa,6.2596,10.3348,Atlantic-Congo,179.131,7
 komo1260,"Komo (Democratic Republic of Congo)",Africa,-0.76333,26.7144,Atlantic-Congo,112.7138333,4
 konk1269,Konkomba,Africa,9.82224,0.2783,Atlantic-Congo,87.21333333,8
@@ -135,7 +126,6 @@ mama1271,"Mamara Senoufo",Africa,12.4871,-5.28245,Atlantic-Congo,81.72466667,2
 mamb1296,Mambwe-Lungu,Africa,-8.86817,31.2269,Atlantic-Congo,72.09833333,7
 mamp1244,Mampruli,Africa,10.3884,-0.74675,Atlantic-Congo,83.31366667,2
 masa1299,Masaaba,Africa,1.05906,34.2829,Atlantic-Congo,99.35733333,0
-mbum1254,Mbum,Africa,7.5789,14.2722,Atlantic-Congo,121.4858333,0
 meru1245,Meru,Africa,0.26484,37.7396,Atlantic-Congo,134.8895,0
 meta1238,"Meta'",Africa,5.88942,9.87416,Atlantic-Congo,179.131,5
 mmen1238,Mmen,Africa,6.43213,10.2541,Atlantic-Congo,142.2301667,5
@@ -153,7 +143,6 @@ nort2774,"Northern Ngbandi",Africa,3.56357,21.8525,Atlantic-Congo,139.5,0
 nort2775,"Northwest Gbaya",Africa,5.9503,15.2569,Atlantic-Congo,115.3066667,4
 ntch1242,Ntcham,Africa,9.23971,0.599275,Atlantic-Congo,102.548,3
 nucl1417,"Nuclear Igbo",Africa,4.62705,7.23441,Atlantic-Congo,166.7195,3
-nucl1240,"Nuclear Mumuye",Africa,8.90347,11.7155,Atlantic-Congo,87.68133333,0
 nucl1347,"Nuclear Wolof",Africa,15.2534,-15.383,Atlantic-Congo,57.04483333,0
 nupe1254,Nupe-Nupe-Tako,Africa,9.18404,5.40031,Atlantic-Congo,101.2986667,5
 nyam1276,Nyamwezi,Africa,-5.08559,32.9445,Atlantic-Congo,68.44083333,3
@@ -183,7 +172,6 @@ tupu1244,Tupuri,Africa,10.0144,14.8697,Atlantic-Congo,70.67516667,4
 umbu1257,Umbundu,Africa,-12.4763,14.4148,Atlantic-Congo,105.8943333,0
 vagl1239,Vagla,Africa,9.33848,-2.31333,Atlantic-Congo,101.8016667,0
 vute1244,Vute,Africa,6.13603,11.8839,Atlantic-Congo,138.73,5
-wame1240,Wamey,Africa,12.5421,-13.177,Atlantic-Congo,103.839,0
 west2458,"West Central Banda",Africa,6.81435,24.1012,Atlantic-Congo,116.7793333,5
 west2454,"Western Niger Fulfulde",Africa,14.2471,-0.52004,Atlantic-Congo,37.27283333,0
 yans1239,Yansi,Africa,-3.8231,18.2341,Atlantic-Congo,134.9326667,3
@@ -208,20 +196,15 @@ cham1312,Chamorro,Papunesia,14.3307,145.276,Austronesian,547.9481667,0
 dobu1241,Dobu,Papunesia,-9.63239,150.825,Austronesian,285.1036667,0
 east2563,"Eastern Cham",Eurasia,11.2853,108.49,Austronesian,155.986,0
 hawa1245,Hawaiian,Papunesia,19.6297,-155.43,Austronesian,145.3201667,0
-iban1264,Iban,Papunesia,2.09041,112.934,Austronesian,284.3385,0
 java1254,Javanese,Papunesia,-0.572307,110.885,Austronesian,220.2373333,0
 kamb1299,Kambera,Papunesia,-9.88447,120.235,Austronesian,110.5881667,0
-kwai1243,Kwaio,Papunesia,-8.93744,160.965,Austronesian,268.5833333,0
 maka1311,Makasar,Papunesia,-5.65551,119.838,Austronesian,218.5181667,0
 mana1295,Manam,Papunesia,-4.07921,145.033,Austronesian,265.529,0
 maor1246,Maori,Papunesia,-38.2881,176.541,Austronesian,152.9673333,0
 mina1268,Minangkabau,Papunesia,4.17,96.25,Austronesian,289.022,0
 moke1242,Moken,Eurasia,10.1474,98.6765,Austronesian,221.913,0
-natu1246,"Natügu",Papunesia,-10.6771,165.835,Austronesian,318.0,0
 nort2845,"North Marquesan",Papunesia,-8.89412,-140.108,Austronesian,108.6138333,0
-paiw1248,Paiwan,Papunesia,22.3271,120.806,Austronesian,187.7113333,0
 pala1344,Palauan,Papunesia,7.17,134.5,Austronesian,275.1273333,0
-pohn1238,Pohnpeian,Papunesia,6.87212,158.223,Austronesian,344.7623333,0
 sela1259,Selaru,Papunesia,-8.18376,130.961,Austronesian,167.9226667,0
 sout2918,"Southern Sama",Papunesia,5.07546,119.38,Austronesian,163.3816667,0
 tetu1245,Tetum,Papunesia,-9.11217,125.528,Austronesian,134.4793333,0
@@ -234,7 +217,6 @@ chac1249,Chachi,"South America",0.71489,-79.0508,Barbacoan,203.2081667,0
 boro1282,Bororo,"South America",-16.6029,-55.2004,Bororoan,112.603,0
 umot1240,"Umotína","South America",-15.5929,-57.4192,Bororoan,122.1135,0
 buru1296,Burushaski,Eurasia,36.2161,74.8236,Burushaski,13.02666667,3
-cadd1256,Caddo,"North America",35.1826,-98.2634,Caddoan,101.73266665,0
 wich1260,Wichita,"North America",35.0665,-98.1831,Caddoan,54.51633333,0
 akur1238,Akurio,"South America",3.19607,-55.6294,Cariban,198.3036667,0
 baka1277,"Bakairí","South America",-14.2628,-54.7034,Cariban,140.9708333,0
@@ -258,18 +240,14 @@ madi1260,"Ma'di",Africa,3.62499,31.8471,"Central Sudanic",85.20033333,4
 moru1253,Moru,Africa,5.1232,30.3287,"Central Sudanic",99.36966667,3
 bari1297,"Bari (Chibchan)","South America",9.08497,-72.9353,Chibchan,145.0491667,0
 bord1248,"Border Kuna","South America",7.92993,-77.1664,Chibchan,171.73,0
-brib1243,Bribri,"North America",9.39794,-83.0539,Chibchan,249.63,0
 cent2150,"Central Tunebo","South America",6.8867,-72.097,Chibchan,267.669,0
 chib1270,Chibcha,"South America",6.24999,-74.1666,Chibchan,235.8101667,0
 cogu1240,Cogui,"South America",10.9485,-73.8043,Chibchan,130.4761667,0
-quil1240,Quileute,"North America",47.9106,-124.603,Chimakuan,218.97383335,0
 chim1301,Chimariko,"North America",41.0,-123.0,Chimariko,89.78625,0
 nort2972,"Northern Emberá","South America",7.12761,-77.574,Chocoan,123.6731667,0
 onaa1245,"Selk'nam","South America",-54.0,-68.5,Chonan,39.248416665,0
 tehu1242,Tehuelche,"South America",-47.5796,-68.3235,Chonan,9.25775,0
 chuk1273,Chukchi,Eurasia,68.6436,170.045,Chukotko-Kamchatkan,24.67,0
-itel1242,Itelmen,Eurasia,56.7798,156.906,Chukotko-Kamchatkan,61.82966667,0
-kory1246,Koryak,Eurasia,63.8977,166.695,Chukotko-Kamchatkan,31.6865,0
 quec1382,Quechan,"North America",32.7859,-114.599,Cochimi-Yuman,9.868166667,0
 jenn1240,"Jennu Kurumba",Eurasia,11.5041,76.5767,Dravidian,61.40316667,0
 koda1255,Kodava,Eurasia,12.2443,75.9161,Dravidian,146.2296667,0
@@ -280,7 +258,6 @@ tami1289,Tamil,Eurasia,10.520219,78.825989,Dravidian,86.471,0
 telu1262,Telugu,Eurasia,16.4529,78.7024,Dravidian,71.09033333,0
 toda1252,Toda,Eurasia,11.4184,77.0168,Dravidian,56.64033333,0
 gaam1241,Gaam,Africa,11.4674,33.9797,"Eastern Jebel",71.14266667,3
-furr1244,Fur,Africa,12.0455,23.6401,Furan,45.877,0
 apuc1241,A-Pucikwar,Eurasia,12.241,92.7965,"Great Andamanese",256.5404167,0
 guah1255,Guahibo,"South America",5.81736,-68.9839,Guahibo,206.0098333,0
 abip1241,Abipon,"South America",-29.0,-61.0,Guaicuruan,67.4495,0
@@ -289,10 +266,8 @@ toba1269,Toba,"South America",-24.4025,-60.4473,Guaicuruan,70.22233333,0
 guat1253,"Guató","South America",-17.8696,-57.2897,"Guató",87.40958333,0
 gunw1252,Gunwinggu,Australia,-12.3398,133.358,Gunwinyguan,100.3691667,0
 nung1290,Nunggubuyu,Australia,-14.2623,135.753,Gunwinyguan,102.1326667,0
-hadz1240,Hadza,Africa,-3.83115,35.0458,Hadza,45.226333335,0
 nort2938,"Northern Haida","North America",54.6931,-132.465,Haida,146.42066665,0
 koal1240,Koalib,Africa,11.6965,30.4717,Heiban,45.87516667,0
-moro1285,Moro,Africa,10.9194,30.2138,Heiban,60.38,0
 otor1240,Otoro,Africa,11.1187,30.573,Heiban,45.87516667,0
 tira1254,Tira,Africa,11.0963,30.8092,Heiban,60.38,0
 sanm1287,"San Mateo del Mar Huave","North America",16.2129,-95.0077,Huavean,65.78983333,0
@@ -323,12 +298,10 @@ sinh1246,Sinhala,Eurasia,8.0,81.0,Indo-European,174.2553333,0
 stan1293,"Standard English",Eurasia,53.0,-1.0,Indo-European,116.303166665,0
 stan1290,"Standard French",Eurasia,48.0,2.0,Indo-European,90.68366667,0
 stan1288,"Standard Spanish",Eurasia,40.4414,-1.11788,Indo-European,41.19783333,0
-cher1273,Cherokee,"North America",35.4664,-83.163,Iroquoian,89.05916667,0
 sene1264,Seneca,"North America",42.6128,-79.3403,Iroquoian,64.5705,0
 wyan1247,Wyandot,"North America",44.33,-77.5,Iroquoian,69.256,0
 nucl1643,"Nuclear Japanese",Eurasia,35.0,135.0,Japonic,140.8765,2
 onge1236,"Önge",Eurasia,10.6926,92.4707,Jarawa-Onge,232.5331667,0
-toll1241,Tol,"North America",14.6686,-87.0372,Jicaquean,155.1826667,0
 shua1257,Shuar,"South America",-3.45136,-78.1892,Jivaroan,182.958,0
 piar1243,Piaroa,"South America",4.41805,-67.7574,Jodi-Saliban,213.275,0
 kron1241,Krongo,Africa,10.514,30.003,Kadugli-Krongo,63.1405,2
@@ -339,16 +312,10 @@ qawa1238,Qawasqar,"South America",-49.703,-75.3756,Kawesqar,67.339916665,0
 haio1238,Hai//om,Africa,-19.7637,17.0299,Khoe-Kwadi,34.27166667,0
 kxoe1243,Kxoe,Africa,-16.5905,22.5998,Khoe-Kwadi,57.58483333,4
 jeme1245,Jemez,"North America",35.5994,-106.766,Kiowa-Tanoan,28.59883333,0
-kiow1266,Kiowa,"North America",34.9403,-98.9042,Kiowa-Tanoan,47.3855,0
 sout2961,"Southern Tiwa","North America",34.7873,-106.661,Kiowa-Tanoan,26.33133333,3
-sout2949,"Southern Kiwai",Papunesia,-8.64889,143.244,Kiwaian,202.6278333,0
-klam1254,Klamath-Modoc,"North America",42.5861,-121.704,Klamath-Modoc,47.0670833325,0
-gras1249,"Grass Koiari",Papunesia,-9.51218,147.437,Koiarian,216.4533333,0
 kima1246,Kimaama,Papunesia,-8.01899,138.355,Kolopom,203.6416667,4
 komo1258,"Komo (Sudan)",Africa,8.94162,34.0939,Koman,124.38,0
 kore1280,Korean,Eurasia,37.5,128.0,Koreanic,34.8105,0
-kuna1268,Kunama,Africa,14.5879,37.5292,Kunama,36.46216667,0
-juho1239,"Ju'hoan",Africa,-19.688,20.7673,Kxa,33.978,0
 nort2952,"Northeast Maidu","North America",40.4102,-120.645,Maiduan,71.44458333,0
 bamb1269,Bambara,Africa,12.0401,-9.98949,Mande,68.521,2
 band1352,Bandi,Africa,7.73729,-10.1684,Mande,211.779,4
@@ -372,23 +339,16 @@ iyow1239,"Iyo'wujwa Chorote","South America",-22.2067,-62.6508,Matacoan,37.85966
 huas1242,Huastec,"North America",21.6153,-98.5028,Mayan,108.8561667,0
 kich1262,"K'iche'","North America",14.5278,-91.1696,Mayan,225.2926667,0
 mamm1241,Mam,"North America",14.8034,-91.7231,Mayan,129.1413333,0
-popt1235,"Popti'","North America",15.6609,-91.6633,Mayan,226.7745,0
 tzel1254,Tzeltal,"North America",16.6384,-92.2786,Mayan,149.4066667,0
-yuca1254,"Yucatec Maya","North America",18.7757,-88.9567,Mayan,108.5615,0
 lake1258,"Lake Miwok","North America",39.0021,-122.621,Miwok-Costanoan,80.97325,0
-daur1238,Dagur,Eurasia,48.0,124.0,Mongolic,36.837,0
 halh1238,"Halh Mongolian",Eurasia,48.324,106.289,Mongolic,16.42683333,0
-mogh1245,Mogholi,Eurasia,34.2504,62.2802,Mongolic,21.83216667,0
-tuuu1240,Tu,Eurasia,36.8177,102.117,Mongolic,11.57783333,0
 chic1270,Chickasaw,"North America",33.9452,-97.1301,Muskogean,113.282,0
 choc1276,Choctaw,"North America",33.8993,-94.819,Muskogean,99.80683333,0
 chec1245,Chechen,Eurasia,43.5,45.5,Nakh-Daghestanian,40.15866667,0
 sout2994,"Southern Nambikuára","South America",-14.3707,-59.5187,Nambiquaran,149.0160833,0
-nara1262,Nara,Africa,15.3251,37.499,Nara,27.66683333,0
 ambu1247,Ambulas,Papunesia,-3.7801,143.059,Ndu,150.701,0
 anua1242,Anuak,Africa,7.57714,34.0267,Nilotic,101.729,4
 kips1239,Kipsigis,Africa,-0.35774,35.258532,Nilotic,44.78166667,4
-kups1238,Kupsabiny,Africa,1.33197,34.5991,Nilotic,84.8985,0
 lang1324,"Lango (Uganda)",Africa,2.13867,33.0553,Nilotic,103.4136667,2
 luok1236,"Luo (Kenya and Tanzania)",Africa,-0.93296,34.4896,Nilotic,87.93083333,3
 maba1273,Mabaan,Africa,9.81455,33.5404,Nilotic,91.05316667,4
@@ -399,11 +359,8 @@ otuh1238,Otuho,Africa,4.16379,32.6641,Nilotic,72.3315,3
 shil1265,Shilluk,Africa,9.85472,31.7926,Nilotic,66.28416667,3
 topo1242,Toposa,Africa,5.15904,34.2159,Nilotic,54.84316667,1
 gily1242,Nivkh,Eurasia,52.59,140.681,Nivkh,45.013583335,0
-mull1237,Mullukmulluk,Australia,-13.2973,130.615,"Northern Daly",100.0095,0
 bumb1241,"Bumbita Arapesh",Papunesia,-3.65508,142.859,"Nuclear Torricelli",219.2466667,0
-ekar1243,Ekari,Papunesia,-3.88974,136.018,"Nuclear Trans New Guinea",274.2535,0
 orok1269,Orokaiva,Papunesia,-8.79019,148.09,"Nuclear Trans New Guinea",216.4533333,0
-want1252,Wantoat,Papunesia,-6.15216,146.513,"Nuclear Trans New Guinea",196.9061667,0
 apin1244,"Apinayé","South America",-6.10774,-47.6315,Nuclear-Macro-Je,157.2183333,0
 cane1242,Canela,"South America",-6.10712,-45.1299,Nuclear-Macro-Je,97.07566667,0
 kara1500,"Karajá","South America",-11.1881,-50.3492,Nuclear-Macro-Je,156.9615,0
@@ -411,18 +368,9 @@ kren1239,Krenak,"South America",-18.9988,-41.2299,Nuclear-Macro-Je,90.667583335,
 xava1240,"Xavánte","South America",-14.3017,-52.4367,Nuclear-Macro-Je,150.9741667,0
 xere1240,"Xerénte","South America",-9.59426,-48.2629,Nuclear-Macro-Je,140.3541667,0
 xokl1240,Xokleng,"South America",-26.9217,-49.5886,Nuclear-Macro-Je,135.5123333,0
-amas1236,"Ama (Sudan)",Africa,12.0993,29.4332,Nyimang,41.99366667,0
 mezq1235,"Mezquital Otomi","North America",20.2274,-99.5564,Otomanguean,47.75716667,3
-achu1247,Achumawi,"North America",41.0979,-121.191,Palaihnihan,56.15383333,0
 alya1239,Alyawarr,Australia,-21.0427,136.835,Pama-Nyungan,19.49733333,0
-band1339,Bandjalang,Australia,-28.3458,152.859,Pama-Nyungan,95.77166667,0
-dhuw1249,Dhuwal,Australia,-12.7825,136.008,Pama-Nyungan,109.9415,0
-dier1241,Dieri,Australia,-28.1667,138.0,Pama-Nyungan,8.11125,0
-east2379,"Eastern Arrernte",Australia,-23.3583,135.046,Pama-Nyungan,16.1175,0
-kala1377,"Kala Lagaw Ya",Papunesia,-10.6748,142.196,Pama-Nyungan,143.3806667,0
 kara1476,Karadjeri,Australia,-18.6771,122.334,Pama-Nyungan,32.74933333,0
-kuku1273,Kuku-Yalanji,Australia,-16.0036,145.188,Pama-Nyungan,149.338,0
-wang1291,Wangaaybuwan-Ngiyambaa,Australia,-30.6481,146.18,Pama-Nyungan,28.10666667,0
 wikm1247,Wik-Mungkan,Australia,-13.9805,141.816,Pama-Nyungan,104.167,0
 amah1246,Amahuaca,"South America",-10.2012,-72.3208,Pano-Tacanan,197.1416667,0
 chac1251,"Chácobo","South America",-12.133,-66.7164,Pano-Tacanan,142.7718333,0
@@ -435,25 +383,19 @@ cusc1236,"Cusco Quechua","South America",-14.0853,-71.7663,Quechuan,52.33916667,
 nezp1238,"Nez Perce","North America",46.3073,-116.408,Sahaptian,38.98883333,0
 daza1242,Dazaga,Africa,15.7358,15.8517,Saharan,5.167,0
 teda1241,Tedaga,Africa,18.0426,14.7717,Saharan,9.579666667,0
-bell1243,"Bella Coola","North America",52.3448,-126.689,Salishan,184.84466665,0
 coeu1236,"Coeur d'Alene","North America",47.2958,-116.715,Salishan,59.723083335,0
-shus1248,Shuswap,"North America",50.8734,-119.667,Salishan,52.455583335,0
 squa1248,Squamish,"North America",49.3231,-123.014,Salishan,145.9771667,0
 sand1273,Sandawe,Africa,-5.26918,35.4808,Sandawe,47.57733333,5
 kwom1262,Kwoma,Papunesia,-4.08721,142.664,Sepik,241.939,0
 seri1257,Seri,"North America",28.9877,-112.384,Seri,11.755666665,0
-shas1239,Shasta,"North America",41.7587,-122.738,Shastan,62.684333335,0
 akha1245,Akha,Eurasia,21.2309,100.964,Sino-Tibetan,107.0758333,0
 anga1288,"Angami Naga",Eurasia,25.6841,93.8668,Sino-Tibetan,175.6196667,0
 aona1235,"Ao Naga",Eurasia,26.3241,94.3824,Sino-Tibetan,181.9028333,0
-cent2004,"Central Bai",Eurasia,26.1666,99.7052,Sino-Tibetan,88.765,0
 garo1247,Garo,Eurasia,25.2954,90.462,Sino-Tibetan,197.3613333,0
-kach1280,Kachin,Eurasia,25.4634,97.3278,Sino-Tibetan,144.302,0
 karb1241,Karbi,Eurasia,25.7317,93.0462,Sino-Tibetan,175.6196667,0
 lepc1244,Lepcha,Eurasia,27.0869,88.5726,Sino-Tibetan,92.0285,0
 loth1237,"Lotha Naga",Eurasia,26.014,94.0435,Sino-Tibetan,181.9028333,0
 mand1415,"Mandarin Chinese",Eurasia,40.0209,116.228,Sino-Tibetan,46.82583333,4
-minn1241,"Min Nan Chinese",Eurasia,24.5,118.17,Sino-Tibetan,145.4996667,0
 lush1249,Mizo,Eurasia,22.6138,92.6247,Sino-Tibetan,213.7041667,0
 nucl1310,"Nuclear Burmese",Eurasia,20.7926,93.9665,Sino-Tibetan,193.4011667,3
 sumi1235,"Sumi Naga",Eurasia,25.9996,94.4235,Sino-Tibetan,151.3966667,0
@@ -466,24 +408,18 @@ lako1247,Lakota,"North America",46.3699,-103.95,Siouan,32.573166665,0
 zarm1239,Zarma,Africa,12.8554,2.41173,Songhay,53.63233333,4
 aari1239,Aari,Africa,5.95034,36.5721,"South Omotic",102.6308333,0
 dime1235,Dime,Africa,6.20951,36.3329,"South Omotic",81.47866667,2
-hame1242,Hamer-Banna,Africa,5.06515,36.5176,"South Omotic",61.5175,0
-murr1258,Murrinh-Patha,Australia,-14.7485,129.702,"Southern Daly",92.08966667,0
 didi1258,Didinga,Africa,4.21489,33.6869,Surmic,46.09666667,4
 meen1242,"Me'en",Africa,6.63207,35.6255,Surmic,45.74266667,0
 suri1267,Suri,Africa,6.03205,35.0823,Surmic,86.5415,2
 anfi1235,Anfillo,Africa,8.568,34.647,Ta-Ne-Omotic,124.38,0
-kafa1242,Kafa,Africa,7.34022,36.1718,Ta-Ne-Omotic,116.6421667,0
 koor1239,Koorete,Africa,5.80545,37.8679,Ta-Ne-Omotic,108.90441665,0
 thai1261,Thai,Eurasia,14.192,100.671,Tai-Kadai,94.63783333,6
 pure1242,Purepecha,"North America",19.2467,-101.631,Tarascan,90.00133333,0
 ticu1245,Ticuna,"South America",-3.66289,-69.8723,Ticuna-Yuri,229.8006667,9
 tiwi1244,Tiwi,Australia,-11.6308,130.949,Tiwi,132.04233335,0
 trum1247,Trumai,"South America",-11.8119,-53.5717,Trumai,165.3646667,0
-nucl1649,"Nuclear Tsimshian","North America",54.6214,-130.496,Tsimshian,204.9759167,0
 cube1242,Cubeo,"South America",1.32382,-70.1939,Tucanoan,251.22,0
 tuca1252,Tucano,"South America",0.579755,-69.5763,Tucanoan,269.124,0
-manc1252,Manchu,Eurasia,47.3122,126.557,Tungusic,43.76016667,0
-nana1257,Nanai,Eurasia,48.4343,134.797,Tungusic,46.222,0
 ache1246,"Aché","South America",-25.5865,-56.4697,Tupian,124.6475,0
 awet1244,"Awetí","South America",-12.9336,-53.5852,Tupian,169.1941667,0
 coca1259,Cocama-Cocamilla,"South America",-4.5,-74.0,Tupian,203.2081667,0
@@ -498,9 +434,7 @@ temb1276,Tembe,"South America",-2.6123,-48.2359,Tupian,158.276,0
 tupi1273,"Tupinambá","South America",-22.807778,-42.106389,Tupian,131.6331667,0
 xeta1241,"Xetá","South America",-24.9408,-52.2266,Tupian,130.3363333,0
 yuqu1240,Yuqui,"South America",-16.7875,-64.9438,Tupian,203.5356667,0
-bash1264,Bashkir,Eurasia,53.5967,56.5594,Turkic,37.457,0
 chuv1255,Chuvash,Eurasia,55.487,47.163,Turkic,44.4895,0
-nort2690,"Northern Uzbek",Eurasia,43.7489,59.231,Turkic,8.010166667,0
 nucl1301,"Nuclear Turkish",Eurasia,39.8667,32.8667,Turkic,42.68766667,0
 yaku1245,Yakut,Eurasia,61.6974,133.98,Turkic,22.44183333,0
 huaa1248,Amkoe,Africa,-24.20022,20.79583,Tuu,26.2185,3
@@ -508,23 +442,18 @@ east2328,"Eastern Mari",Eurasia,55.8307,48.405,Uralic,40.15866667,0
 hung1274,Hungarian,Eurasia,46.9069,19.6555,Uralic,41.344,0
 khan1273,Khanty,Eurasia,62.4308,66.1218,Uralic,42.50316667,0
 nene1249,Nenets,Eurasia,66.1775,71.0234,Uralic,33.02616667,0
-ngan1291,Nganasan,Eurasia,73.1354,86.2106,Uralic,28.0615,0
-selk1253,Selkup,Eurasia,59.9409,82.3004,Uralic,41.94683333,0
 uruu1244,Uru,"South America",-16.7255,-68.9712,Uru-Chipaya,63.0205,0
 coma1245,Comanche,"North America",34.5701,-98.424,Uto-Aztecan,40.14733333,0
 cupe1243,"Cupeño","North America",33.3148,-116.515,Uto-Aztecan,34.87425,0
 hopi1249,Hopi,"North America",35.7653,-110.535,Uto-Aztecan,19.7755,0
 huic1243,Huichol,"North America",21.954,-104.062,Uto-Aztecan,41.82616667,0
-kawa1283,Kawaiisu,"North America",36.0538,-118.679,Uto-Aztecan,29.7535,0
 luis1253,Luiseno,"North America",33.3184,-116.939,Uto-Aztecan,33.49858333,0
 pana1305,Panamint,"North America",36.0007,-117.901,Uto-Aztecan,20.0318333332857,0
 serr1255,Serrano,"North America",33.9479,-116.772,Uto-Aztecan,38.72691667,0
-yaqu1251,Yaqui,"North America",29.9446,-110.681,Uto-Aztecan,35.6055,0
 kwak1269,Kwakiutl,"North America",50.9269,-127.308,Wakashan,195.2758333,0
 nuuc1236,Nuu-chah-nulth,"North America",,,Wakashan,214.8940833,0
 wara1303,Warao,"South America",7.50851,-59.3528,Warao,107.6936667,0
 wash1253,Washo,"North America",38.8184,-119.64,Washo,55.627916665,0
-yana1271,Yana,"North America",39.2769,-121.608,Yana,87.277916665,0
 nina1238,Ninam,"South America",4.03894,-62.7801,Yanomam,261.23441665,0
 sanu1240,"Sanumá","South America",1.31875,-67.6498,Yanomam,245.3733333,0
 yano1261,"Yanomamö","South America",1.67967,-64.8781,Yanomam,244.7775,0
@@ -532,7 +461,6 @@ yano1262,"Yanomámi","South America",2.48999,-62.8522,Yanomam,244.7775,0
 kett1243,Ket,Eurasia,63.7551,87.5466,Yeniseian,44.09416667,0
 yuch1247,Yuchi,"North America",35.9615,-95.0393,Yuchi,106.3493333,0
 nort2745,"Northern Yukaghir",Eurasia,65.3874,151.318,Yukaghir,17.049,0
-wapp1239,Wappo,"North America",38.25,-122.5,Yuki-Wappo,71.414583335,0
 yuki1243,Yuki,"North America",39.8389,-123.296,Yuki-Wappo,95.641166666,0
 yama1264,"Yámana","South America",-55.2748,-68.2648,"Yámana",64.94283333,0
 cham1315,Chamacoco,"South America",-20.5899,-58.2005,Zamucoan,70.63466667,0

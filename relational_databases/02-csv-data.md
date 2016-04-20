@@ -1,8 +1,14 @@
-# CSV data
+# Know your data
 
-We downloaded a CSV file containing data about languages and dialects from Glottolog,
-a TSV file containing the PHOIBLE database on phoneme inventories and a CSV file
-listing values for monthly mean precipitation from D-PLACE (see [README](data/README.md)).
+As we will realize repeatedly during this tutorial it is essential to have
+a good understanding of the data one is dealing with.
+
+We downloaded 
+- a CSV file containing data about languages and dialects from Glottolog,
+- a TSV file containing the PHOIBLE database on phoneme inventories and 
+- a CSV file listing values for monthly mean precipitation from D-PLACE.
+
+See [README](data/README.md) for details.
 
 
 ## The Glottolog data
@@ -13,7 +19,6 @@ Let's do a crude size estimate of the Glottolog data, counting the lines in the 
 $ wc -l data/languages-and-dialects-geo.csv 
 18358 data/languages-and-dialects-geo.csv
 ```
- 
 
 Now we inspect the file using csvkit's `csvstat` command.
 In general it is advisable to constrain the amount of guessing csvkit has to do by specifying all we know about a CSV file. For example, [RFC 4180](https://www.ietf.org/rfc/rfc4180.txt) (the de facto specification of CSV) allows only double quote `"` as quote character (to be used in case field content contains a comma or newline).
@@ -76,11 +81,10 @@ Row count: 18357
 Notes:
 - The row count matches our expectation from counting the lines in the file. (It could be lower, 
   though, because CSV does allow newlines in field content.)
+- There are as many distinct values for the `glottocode` field as there rows, so we can
+  safely assume that the file contains one row per distinct languoid.
 - csvkit also detected plausible data types for the fields; in particular, latitude and longitude
   were detected as containing floating point numbers.
-- Running csvstat on the 8.2 MB PHOIBLE file with 75,388 rows takes > 10 secs on a pretty fast
-  machine.
-
 
 ## The PHOIBLE data
 
@@ -91,6 +95,78 @@ PHOIBLE. There may be more than one inventories per language. Quoting from the P
 
 Note that this data file separates values in rows by a tab `\t`, which is a common variant of 
 delimiter-separated values.
+
+http://phoible.org/contributors/UPSID
+
+> UPSID inventories contain no descriptions of tone.
+
+http://phoible.org/inventories?sSearch_6=UCLA%20Phonological%20Segment%20Inventory%20Database
+
+```
+(qmss2016)dlt5502178l:~/venvs/qmss2016/qmss-2016/relational_databases$ csvstat -t data/phoible-by-phoneme.tsv 
+  1. LanguageCode
+	<class 'str'>
+	Nulls: False
+	Unique values: 1672
+	5 most frequent values:
+		gwn:	323
+		nyf:	282
+		sgw:	254
+		xtc:	245
+		hin:	213
+	Max length: 3
+  2. LanguageName
+	<class 'str'>
+	Nulls: False
+        ...
+  3. SpecificDialect
+        ...
+  4. Phoneme
+	<class 'str'>
+	Nulls: False
+	Unique values: 2215
+	5 most frequent values:
+		m:	2053
+		k:	2016
+		i:	1998
+		a:	1961
+		j:	1901
+	Max length: 11
+  5. Allophones
+        ...
+  6. Source
+	<class 'str'>
+	Nulls: False
+	Unique values: 7
+	5 most frequent values:
+		gm:	19280
+		upsid:	13966
+		ph:	13260
+		saphon:	9051
+		aa:	8064
+	Max length: 6
+  7. GlyphID
+        ...
+  8. InventoryID
+	<class 'int'>
+	Nulls: False
+  9. tone
+	<class 'str'>
+	Nulls: True
+	Values: +, 0
+ 10. stress
+        ...
+ 45. click
+        ...
+
+Row count: 75388
+```
+
+Notes:
+- The `LanguageCode` field looks like it holds exactly one ISO 639-3 language identifier.
+- UPSID inventories are identified by a value of `upsid` for the `Source` field.
+- Running csvstat on the 8.2 MB PHOIBLE file with 75,388 rows takes > 10 secs on a pretty fast
+  machine.
 
 
 ## The D-PLACE data

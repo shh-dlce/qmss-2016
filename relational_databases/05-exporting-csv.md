@@ -7,7 +7,7 @@ sqlite3 supports export to CSV as follows:
 ```bash
 sqlite> .header on
 sqlite> .mode csv
-sqlite> .output macroareas.csv
+sqlite> .output dataset.csv
 sqlite> SELECT * FROM dataset;
 sqlite> .output stdout
 ```

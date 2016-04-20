@@ -154,41 +154,53 @@ or more precisely by inventory and then count the number of grouped phonemes as 
 
 ```sql
 SELECT 
-    InventoryID, LanguageCode, count(*) AS tones
+    InventoryID, LanguageCode, LanguageName, count(*) AS tones
 FROM 
     phonemes 
 WHERE 
     tone = '+' 
 GROUP BY 
     InventoryID, LanguageCode;
+ORDER BY tones DESC;
 ```
 
 <table>
 <TR><TH>InventoryID</TH>
 <TH>LanguageCode</TH>
+<TH>LanguageName</TH>
 <TH>tones</TH>
 </TR>
-<TR><TD>-410</TD>
-<TD>sef</TD>
-<TD>3</TD>
+<TR><TD>662</TD>
+<TD>bfd</TD>
+<TD>bafut</TD>
+<TD>10</TD>
 </TR>
-<TR><TD>-375</TD>
-<TD>bva</TD>
-<TD>2</TD>
+<TR><TD>1390</TD>
+<TD>bwu</TD>
+<TD>Buli</TD>
+<TD>10</TD>
 </TR>
-<TR><TD>-374</TD>
-<TD>bva</TD>
-<TD>3</TD>
+<TR><TD>661</TD>
+<TD>bav</TD>
+<TD>babungo</TD>
+<TD>9</TD>
 </TR>
-<TR><TD>-373</TD>
-<TD>bva</TD>
-<TD>3</TD>
+<TR><TD>1317</TD>
+<TD>sgi</TD>
+<TD>Nizaa</TD>
+<TD>9</TD>
 </TR>
-<TR><TD>-372</TD>
-<TD>bva</TD>
-<TD>3</TD>
+<TR><TD>115</TD>
+<TD>tca</TD>
+<TD>Ticuna</TD>
+<TD>9</TD>
 </TR>
 </table>
+
+To check our assumption that tones are coded with a `+` value for the field `tone`,
+we compare this with the [PHOIBLE website](http://phoible.org/inventories):
+
+![PHOIBLE inventories with tones](images/phoible_tones.png)
 
 A convenient way to store intermediate results (in a dynamic way) is via views, which behave
 much like tables. You can create a view in SQLite running the following SQL:
@@ -196,7 +208,7 @@ much like tables. You can create a view in SQLite running the following SQL:
 ```sql
 CREATE VIEW tones_by_inventory AS 
     SELECT 
-        InventoryID, LanguageCode, count(*) AS tones 
+        InventoryID, LanguageCode, LanguageName, count(*) AS tones 
     FROM 
         phonemes 
     WHERE 
@@ -274,7 +286,7 @@ using a special kind of `JOIN`, a [`LEFT OUTER JOIN`](https://en.wikipedia.org/w
 SELECT 
     p.LanguageCode, coalesce(t.tones, 0) AS tones
 FROM
-    (SELECT DISTINCT LanguageCode FROM phonemes) AS p 
+    (SELECT DISTINCT LanguageCode FROM phonemes WHERE source != 'upsid') AS p 
 LEFT OUTER JOIN
     tones_by_language AS t
 ON
@@ -299,7 +311,7 @@ CREATE VIEW tones AS
     SELECT 
         p.LanguageCode, coalesce(t.tones, 0) AS tones
     FROM
-        (SELECT DISTINCT LanguageCode FROM phonemes) AS p 
+        (SELECT DISTINCT LanguageCode FROM phonemes WHERE source != 'upsid') AS p 
     LEFT OUTER JOIN
         tones_by_language AS t
     ON
@@ -465,7 +477,7 @@ How big is our sample of the world's languages?
 
 ```sql
 sqlite> SELECT count(*) FROM dataset;
-538
+466
 sqlite> SELECT count(*) FROM dataset WHERE tones > 0;
 161
 ```
@@ -510,7 +522,7 @@ Let's have a first peek at the relation between precipitation and tones:
 sqlite> SELECT avg(precipitation) FROM dataset WHERE tones > 0;
 102.076166837901
 sqlite> SELECT avg(precipitation) FROM dataset WHERE tones = 0;
-116.707639478607
+118.320957924165
 ```
 
 Hm. More rain on average for languages without tones.
@@ -550,19 +562,19 @@ SELECT macroarea, avg(precipitation) FROM dataset WHERE tones = 0 GROUP BY macro
 <TH>avg(precipitation)</TH>
 </TR>
 <TR><TD>Africa</TD>
-<TD>91.2403410644948</TD>
+<TD>91.5205032050128</TD>
 </TR>
 <TR><TD>Australia</TD>
-<TD>77.8888273871429</TD>
+<TD>81.8263055683333</TD>
 </TR>
 <TR><TD>Eurasia</TD>
-<TD>84.7322791684625</TD>
+<TD>91.3756792945455</TD>
 </TR>
 <TR><TD>North America</TD>
-<TD>93.5691169340126</TD>
+<TD>82.5951565013728</TD>
 </TR>
 <TR><TD>Papunesia</TD>
-<TD>220.365914528205</TD>
+<TD>212.319091955172</TD>
 </TR>
 <TR><TD>South America</TD>
 <TD>151.575119609094</TD>

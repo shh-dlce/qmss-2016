@@ -148,24 +148,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "dera1248",
-                "name": "Dera (Nigeria)",
-                "macroarea": "Africa",
-                "Language_family": "Afro-Asiatic",
-                "precipitation": "72.78",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    12.0256,
-                    10.072
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "egyp1253",
                 "name": "Egyptian Arabic",
                 "macroarea": "Africa",
@@ -346,24 +328,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "ngiz1242",
-                "name": "Ngizim",
-                "macroarea": "Africa",
-                "Language_family": "Afro-Asiatic",
-                "precipitation": "52.9575",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    11.0178,
-                    12.1051
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "nucl1695",
                 "name": "Nuclear Bole",
                 "macroarea": "Africa",
@@ -490,24 +454,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "tera1251",
-                "name": "Tera",
-                "macroarea": "Africa",
-                "Language_family": "Afro-Asiatic",
-                "precipitation": "58.96883333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    11.8095,
-                    11.0376
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "tigr1271",
                 "name": "Tigrinya",
                 "macroarea": "Africa",
@@ -592,24 +538,6 @@
                 "coordinates": [
                     -96.7635,
                     35.354
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "wiyo1248",
-                "name": "Wiyot",
-                "macroarea": "North America",
-                "Language_family": "Algic",
-                "precipitation": "102.80925",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.952,
-                    39.2492
                 ]
             }
         },
@@ -868,24 +796,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "eyak1241",
-                "name": "Eyak",
-                "macroarea": "North America",
-                "Language_family": "Athapaskan-Eyak-Tlingit",
-                "precipitation": "122.9195",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -144.762,
-                    60.4232
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "hupa1239",
                 "name": "Hupa",
                 "macroarea": "North America",
@@ -952,24 +862,6 @@
                 "coordinates": [
                     -110.082,
                     36.2106
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "tlin1245",
-                "name": "Tlingit",
-                "macroarea": "North America",
-                "Language_family": "Athapaskan-Eyak-Tlingit",
-                "precipitation": "159.6223333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -135.29,
-                    59.4447
                 ]
             }
         },
@@ -1624,24 +1516,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "efik1245",
-                "name": "Efik",
-                "macroarea": "Africa",
-                "Language_family": "Atlantic-Congo",
-                "precipitation": "224.8988333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    8.38121,
-                    4.89379
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "ejag1239",
                 "name": "Ejagham",
                 "macroarea": "Africa",
@@ -1930,24 +1804,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "isok1239",
-                "name": "Isoko",
-                "macroarea": "Africa",
-                "Language_family": "Atlantic-Congo",
-                "precipitation": "195.2455",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    6.24682,
-                    5.52889
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "jola1263",
                 "name": "Jola-Fonyi",
                 "macroarea": "Africa",
@@ -2104,24 +1960,6 @@
                 "coordinates": [
                     29.6441,
                     -1.56771
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "klao1243",
-                "name": "Klao",
-                "macroarea": "Africa",
-                "Language_family": "Atlantic-Congo",
-                "precipitation": "239.2148333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -10.9214,
-                    6.87233
                 ]
             }
         },
@@ -2452,24 +2290,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "mbum1254",
-                "name": "Mbum",
-                "macroarea": "Africa",
-                "Language_family": "Atlantic-Congo",
-                "precipitation": "121.4858333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    14.2722,
-                    7.5789
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "meru1245",
                 "name": "Meru",
                 "macroarea": "Africa",
@@ -2770,24 +2590,6 @@
                 "coordinates": [
                     7.23441,
                     4.62705
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "nucl1240",
-                "name": "Nuclear Mumuye",
-                "macroarea": "Africa",
-                "Language_family": "Atlantic-Congo",
-                "precipitation": "87.68133333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    11.7155,
-                    8.90347
                 ]
             }
         },
@@ -3298,24 +3100,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "wame1240",
-                "name": "Wamey",
-                "macroarea": "Africa",
-                "Language_family": "Atlantic-Congo",
-                "precipitation": "103.839",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -13.177,
-                    12.5421
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "west2458",
                 "name": "West Central Banda",
                 "macroarea": "Africa",
@@ -3748,24 +3532,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "iban1264",
-                "name": "Iban",
-                "macroarea": "Papunesia",
-                "Language_family": "Austronesian",
-                "precipitation": "284.3385",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    112.934,
-                    2.09041
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "java1254",
                 "name": "Javanese",
                 "macroarea": "Papunesia",
@@ -3796,24 +3562,6 @@
                 "coordinates": [
                     120.235,
                     -9.88447
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "kwai1243",
-                "name": "Kwaio",
-                "macroarea": "Papunesia",
-                "Language_family": "Austronesian",
-                "precipitation": "268.5833333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    160.965,
-                    -8.93744
                 ]
             }
         },
@@ -3910,24 +3658,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "natu1246",
-                "name": "Natügu",
-                "macroarea": "Papunesia",
-                "Language_family": "Austronesian",
-                "precipitation": "318.0",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    165.835,
-                    -10.6771
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "nort2845",
                 "name": "North Marquesan",
                 "macroarea": "Papunesia",
@@ -3946,24 +3676,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "paiw1248",
-                "name": "Paiwan",
-                "macroarea": "Papunesia",
-                "Language_family": "Austronesian",
-                "precipitation": "187.7113333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    120.806,
-                    22.3271
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "pala1344",
                 "name": "Palauan",
                 "macroarea": "Papunesia",
@@ -3976,24 +3688,6 @@
                 "coordinates": [
                     134.5,
                     7.17
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "pohn1238",
-                "name": "Pohnpeian",
-                "macroarea": "Papunesia",
-                "Language_family": "Austronesian",
-                "precipitation": "344.7623333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    158.223,
-                    6.87212
                 ]
             }
         },
@@ -4210,24 +3904,6 @@
                 "coordinates": [
                     74.8236,
                     36.2161
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "cadd1256",
-                "name": "Caddo",
-                "macroarea": "North America",
-                "Language_family": "Caddoan",
-                "precipitation": "101.73266665",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -98.2634,
-                    35.1826
                 ]
             }
         },
@@ -4648,24 +4324,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "brib1243",
-                "name": "Bribri",
-                "macroarea": "North America",
-                "Language_family": "Chibchan",
-                "precipitation": "249.63",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -83.0539,
-                    9.39794
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "cent2150",
                 "name": "Central Tunebo",
                 "macroarea": "South America",
@@ -4714,24 +4372,6 @@
                 "coordinates": [
                     -73.8043,
                     10.9485
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "quil1240",
-                "name": "Quileute",
-                "macroarea": "North America",
-                "Language_family": "Chimakuan",
-                "precipitation": "218.97383335",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -124.603,
-                    47.9106
                 ]
             }
         },
@@ -4822,42 +4462,6 @@
                 "coordinates": [
                     170.045,
                     68.6436
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "itel1242",
-                "name": "Itelmen",
-                "macroarea": "Eurasia",
-                "Language_family": "Chukotko-Kamchatkan",
-                "precipitation": "61.82966667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    156.906,
-                    56.7798
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "kory1246",
-                "name": "Koryak",
-                "macroarea": "Eurasia",
-                "Language_family": "Chukotko-Kamchatkan",
-                "precipitation": "31.6865",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    166.695,
-                    63.8977
                 ]
             }
         },
@@ -5044,24 +4648,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "furr1244",
-                "name": "Fur",
-                "macroarea": "Africa",
-                "Language_family": "Furan",
-                "precipitation": "45.877",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    23.6401,
-                    12.0455
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "apuc1241",
                 "name": "A-Pucikwar",
                 "macroarea": "Eurasia",
@@ -5206,24 +4792,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "hadz1240",
-                "name": "Hadza",
-                "macroarea": "Africa",
-                "Language_family": "Hadza",
-                "precipitation": "45.226333335",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    35.0458,
-                    -3.83115
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "nort2938",
                 "name": "Northern Haida",
                 "macroarea": "North America",
@@ -5254,24 +4822,6 @@
                 "coordinates": [
                     30.4717,
                     11.6965
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "moro1285",
-                "name": "Moro",
-                "macroarea": "Africa",
-                "Language_family": "Heiban",
-                "precipitation": "60.38",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    30.2138,
-                    10.9194
                 ]
             }
         },
@@ -5818,24 +5368,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "cher1273",
-                "name": "Cherokee",
-                "macroarea": "North America",
-                "Language_family": "Iroquoian",
-                "precipitation": "89.05916667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -83.163,
-                    35.4664
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "sene1264",
                 "name": "Seneca",
                 "macroarea": "North America",
@@ -5902,24 +5434,6 @@
                 "coordinates": [
                     92.4707,
                     10.6926
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "toll1241",
-                "name": "Tol",
-                "macroarea": "North America",
-                "Language_family": "Jicaquean",
-                "precipitation": "155.1826667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -87.0372,
-                    14.6686
                 ]
             }
         },
@@ -6106,24 +5620,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "kiow1266",
-                "name": "Kiowa",
-                "macroarea": "North America",
-                "Language_family": "Kiowa-Tanoan",
-                "precipitation": "47.3855",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -98.9042,
-                    34.9403
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "sout2961",
                 "name": "Southern Tiwa",
                 "macroarea": "North America",
@@ -6136,60 +5632,6 @@
                 "coordinates": [
                     -106.661,
                     34.7873
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "sout2949",
-                "name": "Southern Kiwai",
-                "macroarea": "Papunesia",
-                "Language_family": "Kiwaian",
-                "precipitation": "202.6278333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    143.244,
-                    -8.64889
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "klam1254",
-                "name": "Klamath-Modoc",
-                "macroarea": "North America",
-                "Language_family": "Klamath-Modoc",
-                "precipitation": "47.0670833325",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -121.704,
-                    42.5861
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "gras1249",
-                "name": "Grass Koiari",
-                "macroarea": "Papunesia",
-                "Language_family": "Koiarian",
-                "precipitation": "216.4533333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    147.437,
-                    -9.51218
                 ]
             }
         },
@@ -6244,42 +5686,6 @@
                 "coordinates": [
                     128,
                     37.5
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "kuna1268",
-                "name": "Kunama",
-                "macroarea": "Africa",
-                "Language_family": "Kunama",
-                "precipitation": "36.46216667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    37.5292,
-                    14.5879
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "juho1239",
-                "name": "Ju'hoan",
-                "macroarea": "Africa",
-                "Language_family": "Kxa",
-                "precipitation": "33.978",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    20.7673,
-                    -19.688
                 ]
             }
         },
@@ -6700,24 +6106,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "popt1235",
-                "name": "Popti'",
-                "macroarea": "North America",
-                "Language_family": "Mayan",
-                "precipitation": "226.7745",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -91.6633,
-                    15.6609
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "tzel1254",
                 "name": "Tzeltal",
                 "macroarea": "North America",
@@ -6730,24 +6118,6 @@
                 "coordinates": [
                     -92.2786,
                     16.6384
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "yuca1254",
-                "name": "Yucatec Maya",
-                "macroarea": "North America",
-                "Language_family": "Mayan",
-                "precipitation": "108.5615",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -88.9567,
-                    18.7757
                 ]
             }
         },
@@ -6772,24 +6142,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "daur1238",
-                "name": "Dagur",
-                "macroarea": "Eurasia",
-                "Language_family": "Mongolic",
-                "precipitation": "36.837",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    124,
-                    48
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "halh1238",
                 "name": "Halh Mongolian",
                 "macroarea": "Eurasia",
@@ -6802,42 +6154,6 @@
                 "coordinates": [
                     106.289,
                     48.324
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "mogh1245",
-                "name": "Mogholi",
-                "macroarea": "Eurasia",
-                "Language_family": "Mongolic",
-                "precipitation": "21.83216667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    62.2802,
-                    34.2504
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "tuuu1240",
-                "name": "Tu",
-                "macroarea": "Eurasia",
-                "Language_family": "Mongolic",
-                "precipitation": "11.57783333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    102.117,
-                    36.8177
                 ]
             }
         },
@@ -6916,24 +6232,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "nara1262",
-                "name": "Nara",
-                "macroarea": "Africa",
-                "Language_family": "Nara",
-                "precipitation": "27.66683333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    37.499,
-                    15.3251
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "ambu1247",
                 "name": "Ambulas",
                 "macroarea": "Papunesia",
@@ -6982,24 +6280,6 @@
                 "coordinates": [
                     35.258532,
                     -0.35774
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "kups1238",
-                "name": "Kupsabiny",
-                "macroarea": "Africa",
-                "Language_family": "Nilotic",
-                "precipitation": "84.8985",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    34.5991,
-                    1.33197
                 ]
             }
         },
@@ -7186,24 +6466,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "mull1237",
-                "name": "Mullukmulluk",
-                "macroarea": "Australia",
-                "Language_family": "Northern Daly",
-                "precipitation": "100.0095",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    130.615,
-                    -13.2973
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "bumb1241",
                 "name": "Bumbita Arapesh",
                 "macroarea": "Papunesia",
@@ -7222,24 +6484,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "ekar1243",
-                "name": "Ekari",
-                "macroarea": "Papunesia",
-                "Language_family": "Nuclear Trans New Guinea",
-                "precipitation": "274.2535",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    136.018,
-                    -3.88974
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "orok1269",
                 "name": "Orokaiva",
                 "macroarea": "Papunesia",
@@ -7252,24 +6496,6 @@
                 "coordinates": [
                     148.09,
                     -8.79019
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "want1252",
-                "name": "Wantoat",
-                "macroarea": "Papunesia",
-                "Language_family": "Nuclear Trans New Guinea",
-                "precipitation": "196.9061667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    146.513,
-                    -6.15216
                 ]
             }
         },
@@ -7402,24 +6628,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "amas1236",
-                "name": "Ama (Sudan)",
-                "macroarea": "Africa",
-                "Language_family": "Nyimang",
-                "precipitation": "41.99366667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    29.4332,
-                    12.0993
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "mezq1235",
                 "name": "Mezquital Otomi",
                 "macroarea": "North America",
@@ -7432,24 +6640,6 @@
                 "coordinates": [
                     -99.5564,
                     20.2274
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "achu1247",
-                "name": "Achumawi",
-                "macroarea": "North America",
-                "Language_family": "Palaihnihan",
-                "precipitation": "56.15383333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -121.191,
-                    41.0979
                 ]
             }
         },
@@ -7474,96 +6664,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "band1339",
-                "name": "Bandjalang",
-                "macroarea": "Australia",
-                "Language_family": "Pama-Nyungan",
-                "precipitation": "95.77166667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    152.859,
-                    -28.3458
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "dhuw1249",
-                "name": "Dhuwal",
-                "macroarea": "Australia",
-                "Language_family": "Pama-Nyungan",
-                "precipitation": "109.9415",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    136.008,
-                    -12.7825
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "dier1241",
-                "name": "Dieri",
-                "macroarea": "Australia",
-                "Language_family": "Pama-Nyungan",
-                "precipitation": "8.11125",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    138,
-                    -28.1667
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "east2379",
-                "name": "Eastern Arrernte",
-                "macroarea": "Australia",
-                "Language_family": "Pama-Nyungan",
-                "precipitation": "16.1175",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    135.046,
-                    -23.3583
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "kala1377",
-                "name": "Kala Lagaw Ya",
-                "macroarea": "Papunesia",
-                "Language_family": "Pama-Nyungan",
-                "precipitation": "143.3806667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    142.196,
-                    -10.6748
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "kara1476",
                 "name": "Karadjeri",
                 "macroarea": "Australia",
@@ -7576,42 +6676,6 @@
                 "coordinates": [
                     122.334,
                     -18.6771
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "kuku1273",
-                "name": "Kuku-Yalanji",
-                "macroarea": "Australia",
-                "Language_family": "Pama-Nyungan",
-                "precipitation": "149.338",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    145.188,
-                    -16.0036
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "wang1291",
-                "name": "Wangaaybuwan-Ngiyambaa",
-                "macroarea": "Australia",
-                "Language_family": "Pama-Nyungan",
-                "precipitation": "28.10666667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    146.18,
-                    -30.6481
                 ]
             }
         },
@@ -7834,24 +6898,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "bell1243",
-                "name": "Bella Coola",
-                "macroarea": "North America",
-                "Language_family": "Salishan",
-                "precipitation": "184.84466665",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -126.689,
-                    52.3448
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "coeu1236",
                 "name": "Coeur d'Alene",
                 "macroarea": "North America",
@@ -7864,24 +6910,6 @@
                 "coordinates": [
                     -116.715,
                     47.2958
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "shus1248",
-                "name": "Shuswap",
-                "macroarea": "North America",
-                "Language_family": "Salishan",
-                "precipitation": "52.455583335",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -119.667,
-                    50.8734
                 ]
             }
         },
@@ -7960,24 +6988,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "shas1239",
-                "name": "Shasta",
-                "macroarea": "North America",
-                "Language_family": "Shastan",
-                "precipitation": "62.684333335",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.738,
-                    41.7587
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "akha1245",
                 "name": "Akha",
                 "macroarea": "Eurasia",
@@ -8032,24 +7042,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "cent2004",
-                "name": "Central Bai",
-                "macroarea": "Eurasia",
-                "Language_family": "Sino-Tibetan",
-                "precipitation": "88.765",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    99.7052,
-                    26.1666
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "garo1247",
                 "name": "Garo",
                 "macroarea": "Eurasia",
@@ -8062,24 +7054,6 @@
                 "coordinates": [
                     90.462,
                     25.2954
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "kach1280",
-                "name": "Kachin",
-                "macroarea": "Eurasia",
-                "Language_family": "Sino-Tibetan",
-                "precipitation": "144.302",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    97.3278,
-                    25.4634
                 ]
             }
         },
@@ -8152,24 +7126,6 @@
                 "coordinates": [
                     116.228,
                     40.0209
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "minn1241",
-                "name": "Min Nan Chinese",
-                "macroarea": "Eurasia",
-                "Language_family": "Sino-Tibetan",
-                "precipitation": "145.4996667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    118.17,
-                    24.5
                 ]
             }
         },
@@ -8392,42 +7348,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "hame1242",
-                "name": "Hamer-Banna",
-                "macroarea": "Africa",
-                "Language_family": "South Omotic",
-                "precipitation": "61.5175",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    36.5176,
-                    5.06515
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "murr1258",
-                "name": "Murrinh-Patha",
-                "macroarea": "Australia",
-                "Language_family": "Southern Daly",
-                "precipitation": "92.08966667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    129.702,
-                    -14.7485
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "didi1258",
                 "name": "Didinga",
                 "macroarea": "Africa",
@@ -8494,24 +7414,6 @@
                 "coordinates": [
                     34.647,
                     8.568
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "kafa1242",
-                "name": "Kafa",
-                "macroarea": "Africa",
-                "Language_family": "Ta-Ne-Omotic",
-                "precipitation": "116.6421667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    36.1718,
-                    7.34022
                 ]
             }
         },
@@ -8626,24 +7528,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "nucl1649",
-                "name": "Nuclear Tsimshian",
-                "macroarea": "North America",
-                "Language_family": "Tsimshian",
-                "precipitation": "204.9759167",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -130.496,
-                    54.6214
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "cube1242",
                 "name": "Cubeo",
                 "macroarea": "South America",
@@ -8674,42 +7558,6 @@
                 "coordinates": [
                     -69.5763,
                     0.579755
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "manc1252",
-                "name": "Manchu",
-                "macroarea": "Eurasia",
-                "Language_family": "Tungusic",
-                "precipitation": "43.76016667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    126.557,
-                    47.3122
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "nana1257",
-                "name": "Nanai",
-                "macroarea": "Eurasia",
-                "Language_family": "Tungusic",
-                "precipitation": "46.222",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    134.797,
-                    48.4343
                 ]
             }
         },
@@ -8968,24 +7816,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "bash1264",
-                "name": "Bashkir",
-                "macroarea": "Eurasia",
-                "Language_family": "Turkic",
-                "precipitation": "37.457",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    56.5594,
-                    53.5967
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "chuv1255",
                 "name": "Chuvash",
                 "macroarea": "Eurasia",
@@ -8998,24 +7828,6 @@
                 "coordinates": [
                     47.163,
                     55.487
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "nort2690",
-                "name": "Northern Uzbek",
-                "macroarea": "Eurasia",
-                "Language_family": "Turkic",
-                "precipitation": "8.010166667",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    59.231,
-                    43.7489
                 ]
             }
         },
@@ -9148,42 +7960,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "ngan1291",
-                "name": "Nganasan",
-                "macroarea": "Eurasia",
-                "Language_family": "Uralic",
-                "precipitation": "28.0615",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    86.2106,
-                    73.1354
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "selk1253",
-                "name": "Selkup",
-                "macroarea": "Eurasia",
-                "Language_family": "Uralic",
-                "precipitation": "41.94683333",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    82.3004,
-                    59.9409
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "uruu1244",
                 "name": "Uru",
                 "macroarea": "South America",
@@ -9274,24 +8050,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "kawa1283",
-                "name": "Kawaiisu",
-                "macroarea": "North America",
-                "Language_family": "Uto-Aztecan",
-                "precipitation": "29.7535",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -118.679,
-                    36.0538
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "luis1253",
                 "name": "Luiseno",
                 "macroarea": "North America",
@@ -9346,24 +8104,6 @@
         {
             "type": "Feature",
             "properties": {
-                "glottocode": "yaqu1251",
-                "name": "Yaqui",
-                "macroarea": "North America",
-                "Language_family": "Uto-Aztecan",
-                "precipitation": "35.6055",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -110.681,
-                    29.9446
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "glottocode": "kwak1269",
                 "name": "Kwakiutl",
                 "macroarea": "North America",
@@ -9412,24 +8152,6 @@
                 "coordinates": [
                     -119.64,
                     38.8184
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "yana1271",
-                "name": "Yana",
-                "macroarea": "North America",
-                "Language_family": "Yana",
-                "precipitation": "87.277916665",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -121.608,
-                    39.2769
                 ]
             }
         },
@@ -9556,24 +8278,6 @@
                 "coordinates": [
                     151.318,
                     65.3874
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "glottocode": "wapp1239",
-                "name": "Wappo",
-                "macroarea": "North America",
-                "Language_family": "Yuki-Wappo",
-                "precipitation": "71.414583335",
-                "tones": "0"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -122.5,
-                    38.25
                 ]
             }
         },

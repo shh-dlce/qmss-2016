@@ -147,7 +147,7 @@ defined after the `FROM` keyword:
 
 ![SQL filter](images/sql-filter.png)
 
-<small>Image taken from [software carpentry](http://swcarpentry.github.io/sql-novice-survey/03-filter.html)</small>
+<p style="font-size: small;">Image taken from [software carpentry](http://swcarpentry.github.io/sql-novice-survey/03-filter.html)</p>
 
 In how many languages do they occur?
 

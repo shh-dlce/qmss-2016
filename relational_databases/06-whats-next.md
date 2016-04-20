@@ -23,6 +23,7 @@ FROM
   languoids AS g
   JOIN
   (
+    -- our view tones:
     SELECT
       p.LanguageCode,
       coalesce(t.tones, 0) AS tones
@@ -32,11 +33,13 @@ FROM
        WHERE source != 'upsid') AS p
       LEFT OUTER JOIN
       (
+        -- our view tones_by_language:
         SELECT
           LanguageCode,
           max(tones) AS tones
         FROM
           (
+            -- our view tones_by_inventory:
             SELECT
               InventoryID,
               LanguageCode,
@@ -59,6 +62,7 @@ FROM
       g.isocodes = p.LanguageCode
   JOIN
   (
+    -- our view precipitation_by_glottocode:
     SELECT
       glottocode,
       Language_family,
@@ -78,6 +82,9 @@ ORDER BY
 
 While this may look a bit overwhelming, constructing this query was kind of natural, and now
 that we have it, we can simply [store it in a file](query.sql).
+
+Note that comments can be included in SQL queries using the `--` syntax. The remainder of the 
+line following `--` will be regarded as comment.
 
 We further note that the `sqlite3` command can be called non-interactively, passing in
 arguments that specify the output mode and SQL to execute:

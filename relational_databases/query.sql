@@ -11,6 +11,7 @@ FROM
   languoids AS g
   JOIN
   (
+    -- our view tones:
     SELECT
       p.LanguageCode,
       coalesce(t.tones, 0) AS tones
@@ -20,11 +21,13 @@ FROM
        WHERE source != 'upsid') AS p
       LEFT OUTER JOIN
       (
+        -- our view tones_by_language:
         SELECT
           LanguageCode,
           max(tones) AS tones
         FROM
           (
+            -- our view tones_by_inventory:
             SELECT
               InventoryID,
               LanguageCode,
@@ -47,6 +50,7 @@ FROM
       g.isocodes = p.LanguageCode
   JOIN
   (
+    -- our view precipitation_by_glottocode:
     SELECT
       glottocode,
       Language_family,

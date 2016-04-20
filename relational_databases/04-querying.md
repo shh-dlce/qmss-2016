@@ -145,7 +145,7 @@ While the field descriptions following the `SELECT` keyword specify a filtering 
 fields of result rows, the `WHERE` clause filters result rows from the set of all rows
 defined after the `FROM` keyword:
 
-![SQL filter](images/sql-filter.svg)
+![SQL filter](images/sql-filter.png)
 
 <small>Image taken from [software carpentry](http://swcarpentry.github.io/sql-novice-survey/03-filter.html)</small>
 

@@ -10,3 +10,9 @@
 - create an account on github.com
 - clone this repository
 
+
+## Tutorials
+
+- [Textual data](textual_data/README.md)
+- [SQL databases](relational_databases/README.md)
+

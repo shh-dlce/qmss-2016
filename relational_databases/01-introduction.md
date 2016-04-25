@@ -23,6 +23,12 @@ Using relational databases is motivated as follows:
 > tools for search and analysis, and can handle large, complex data sets. These lessons will 
 > show how to use a database to explore [...] data.
 
+In addition to handling lots of data well (gigabytes of data or more), relational databases
+are also very well suited to store data that is still updated/added to or otherwise curated,
+because they provide guaranteed data integrity via
+- [ACID](https://en.wikipedia.org/wiki/ACID) transactions,
+- constraints (i.e. column or table level rules for the data that can be stored).
+
 
 ## SQL
 
@@ -37,6 +43,18 @@ origins in the SQL standard, e.g.
 - the `groupby` function in python's `itertools` library,
 - the `csvjoin` command of csvkit,
 - the R data.table package explicitely mentions SQL as a motivation of its syntax.
+
+SQL comprises functionality for
+- schema creation and modification: `CREATE|DROP|ALTER TABLE` (the so-called 
+  [DDL - data definition language](https://en.wikipedia.org/wiki/Data_definition_language))
+- data curation: `INSERT`, `UPDATE` (the so-called
+  [DML - data manipulation language](https://en.wikipedia.org/wiki/Data_manipulation_language))
+  including data retrieval: [`SELECT`](https://en.wikipedia.org/wiki/Select_%28SQL%29).
+- [transaction](https://en.wikipedia.org/wiki/Database_transaction) control: `COMMIT`, `ROLLBACK`
+
+SQL is a large standard, and like most large standards, no implementation adheres to 100% of it.
+Still, when sticking to basic constructs, a good level of interoperability between database
+platforms can be reached.
 
 
 ## SQLite

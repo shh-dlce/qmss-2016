@@ -110,15 +110,17 @@ Australia
 <null>
 ```
 
-Note that `null` is not really a value, though, e.g.
-```sql
-sqlite> SELECT count(DISTINCT macroarea) FROM languoids;
-6
-sqlite> SELECT count(*) FROM languoids WHERE macroarea = null;
-0
-sqlite> SELECT count(*) FROM languoids WHERE macroarea is null;
-60
-```
+Notes:
+- `null` corresponds to `NA` in R.
+- `null` is not really a value, though, e.g.
+  ```sql
+  sqlite> SELECT count(DISTINCT macroarea) FROM languoids;
+  6
+  sqlite> SELECT count(*) FROM languoids WHERE macroarea = null;
+  0
+  sqlite> SELECT count(*) FROM languoids WHERE macroarea is null;
+  60
+  ```
 
 We have used the aggregation function `count` to aggregate information from all rows of the
 result set.
@@ -306,6 +308,8 @@ ON
 ```
 
 Notes:
+- R provides functionality much like `JOIN` via its `merge` function. Setting the `all.x` or
+  `all.y` arguments to `T` corresponds to `LEFT` or `RIGHT OUTER JOIN`.
 - A `LEFT OUTER JOIN` makes sure that the result set contains at least one row for each row
   the left table. If no row matching the `ON` condition can be found in the right table, the
   result row will be filled up with `null`.

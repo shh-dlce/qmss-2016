@@ -1,0 +1,15 @@
+---
+title: "(Very) basics of statistical thinking"
+output: html_document
+---
+
+Hi there - now that you have succesfuly survived [Sean's tutorial](), it is time to refresh some of the ideas (and the jargon) of basic statistics.  
+
+**Caveat reader**: this is not intended to replace a proper basic course on statistics. The concepts and definitions are treated in a summary way, and some basic mathematics is assumed. 
+
+## [Part 1: Probability and distributions](statstutorial1.html)
+
+## [Part 2: Models and hypotheses](statstutorial2.html)
+
+## [Part 3: Statistical testing](stats_tutorial3.html)
+

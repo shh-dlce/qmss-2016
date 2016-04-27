@@ -1,6 +1,8 @@
 # Tutorial: Data wrangling with SQLite
 
-In this tutorial we learn how to use a relational database to merge and analyse CSV data from different sources.
+In this tutorial we learn how to use a relational database to merge and analyse CSV data from different sources. You can follow the instructions for this tutorial by opening the file 
+`qmss-2016/relational_databases/README.html` (from your local clone of the QMSS repository) 
+in your browser.
 
 The tutorial requires 
 - [csvkit](https://csvkit.readthedocs.org/en/0.9.1/index.html) (optional)

@@ -55,7 +55,7 @@
               
               <article class="markdown-body entry-content" itemprop="text" id="grip-content">
                 <h1>
-<a id="user-content-exporting-csv-data" class="anchor" href="#exporting-csv-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exporting CSV data</h1>
+<a id="user-content-exporting-data" class="anchor" href="#exporting-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exporting data</h1>
 
 <h2>
 <a id="user-content-using-sqlite3" class="anchor" href="#using-sqlite3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using sqlite3</h2>
@@ -80,6 +80,31 @@ sqlite<span class="pl-k">&gt;</span> .output stdout</pre></div>
 <p><a href="images/sqlitemanager-export.png" target="_blank"><img src="images/sqlitemanager-export.png" alt="SQLite Manager export" style="max-width:100%;"></a></p>
 
 <p>Configure the export, click "OK", select an output file and enjoy!</p>
+
+<h2>
+<a id="user-content-sqlite-and-version-control" class="anchor" href="#sqlite-and-version-control" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SQLite and version control</h2>
+
+<p>While the sqlite database file is quite portable and could be shared e.g. using
+a service like dropbox, this may not be the best option for collaboration or
+backup. Since the sqlite file is a binary file, it is also not well suited for
+version control systems like git.</p>
+
+<p>But SQLite (like most relational databases) supports dumping a database to SQL,
+which in turn is a line-based text format, perfectly suited for version control.</p>
+
+<p>Thus, we can dump and restore a database to/from SQL:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ sqlite3 qmss.sqlite .dump <span class="pl-k">&gt;</span> qmss.sql
+$ sqlite3 qmss_restored.sqlite <span class="pl-k">&lt;</span> qmss.sql</pre></div>
+
+<p>This will give us all the advantages of version control to make changes to our
+data transparent. E.g. updating data using SQL like</p>
+
+<div class="highlight highlight-source-sql"><pre><span class="pl-k">UPDATE</span> precipitation <span class="pl-k">SET</span> Language_family <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Maipuran<span class="pl-pds">'</span></span> <span class="pl-k">WHERE</span> Language_family <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Arawakan<span class="pl-pds">'</span></span>;</pre></div>
+
+<p>will result in a changeset of the SQL dump <a href="https://github.com/shh-dlce/qmss-2016/commit/caa85bb17349d0f2cea7e6b353087cb51e10ac50">looking like this</a>:</p>
+
+<p><a href="images/sql-dump-diff.png" target="_blank"><img src="images/sql-dump-diff.png" alt="SQL dump diff" style="max-width:100%;"></a></p>
 
 <h2>
 <a id="user-content-next-section" class="anchor" href="#next-section" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Next section</h2>

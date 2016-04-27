@@ -4,7 +4,7 @@ In this tutorial we learn how to use a relational database to merge and analyse 
 
 The tutorial requires 
 - [csvkit](https://csvkit.readthedocs.org/en/0.9.1/index.html) (optional)
-- a sqlite database manager, either [sqlite](https://www.sqlite.org/download.html) or 
+- a sqlite database manager, either the [`sqlite3` command line shell](https://www.sqlite.org/cli.html) included in [sqlite](https://www.sqlite.org/download.html) or 
   alternatively [SQLite Manager for Firefox](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/)
 
 We will use the following data:

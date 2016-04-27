@@ -81,7 +81,7 @@ Row count: 18357
 Notes:
 - The row count matches our expectation from counting the lines in the file. (It could be lower, 
   though, because CSV does allow newlines in field content.)
-- There are as many distinct values for the `glottocode` field as there rows, so we can
+- There are as many distinct values for the `glottocode` field as there are rows, so we can
   safely assume that the file contains one row per distinct languoid.
 - csvkit also detected plausible data types for the fields; in particular, latitude and longitude
   were detected as containing floating point numbers.
@@ -103,8 +103,8 @@ be gleaned from
 [this commit](https://github.com/shh-dlce/qmss-2016/commit/7cf7976d92db675d95dac6412c2a80a8edee6137).)
 
 
-```
-(qmss2016)dlt5502178l:~/venvs/qmss2016/qmss-2016/relational_databases$ csvstat -t data/phoible-by-phoneme.tsv 
+```bash
+$ csvstat -t data/phoible-by-phoneme.tsv 
   1. LanguageCode
 	<class 'str'>
 	Nulls: False
@@ -191,6 +191,181 @@ Ethnographic Atlas,!Kung,Aa1,xd1,Kung (Aa1),-20.0,21.0,-20.0,21.0,juho1239,Ju'ho
 
 A preprocessed version of the file, with citation notice removed and whitespace in column 
 names replaced is available [in the repository](data/dplace-societies-2016-4-19-clean.csv).
+
+```bash
+$ csvstat data/dplace-societies-2016-4-19-clean.csv
+  1. Source
+	<class 'str'>
+	Nulls: False
+	Values: Binford Hunter-Gatherer, Ethnographic Atlas
+  2. Preferred_society_name
+	<class 'str'>
+	Nulls: False
+	Unique values: 1406
+	5 most frequent values:
+		Bannock:	2
+		Northern Saulteaux:	2
+		Coos:	2
+		Tongva:	2
+		Koso:	2
+	Max length: 38
+  3. Society_id
+	<class 'str'>
+	Nulls: False
+	Unique values: 1621
+	Max length: 5
+  4. Cross_dataset_id
+	<class 'str'>
+	Nulls: False
+	Unique values: 1396
+	5 most frequent values:
+		xd1166:	4
+		xd1116:	3
+		xd995:	3
+		xd1162:	3
+		xd1189:	3
+	Max length: 6
+  5. Original_society_name
+	<class 'str'>
+	Nulls: False
+	Unique values: 1621
+	Max length: 42
+  6. Revised_latitude
+	<class 'float'>
+	Nulls: False
+	Min: -55.02
+	Max: 78.0
+	Sum: 28735.86000000001
+	Mean: 17.727242442936465
+	Median: 12.0
+	Standard Deviation: 25.397885862335116
+	Unique values: 552
+	5 most frequent values:
+		6.0:	45
+		10.0:	40
+		11.0:	39
+		36.0:	33
+		8.0:	33
+  7. Revised_longitude
+	<class 'float'>
+	Nulls: False
+	Min: -179.31
+	Max: 178.68
+	Sum: -12432.269999999995
+	Mean: -7.669506477483032
+	Median: 9.0
+	Standard Deviation: 91.08959368789903
+	Unique values: 696
+	5 most frequent values:
+		36.0:	29
+		34.0:	22
+		35.0:	21
+		31.0:	20
+		28.0:	19
+  8. Original_latitude
+	<class 'float'>
+	Nulls: False
+	Min: -60.0
+	Max: 78.0
+	Sum: 28674.490000000005
+	Mean: 17.689383096853796
+	Median: 12.0
+	Standard Deviation: 25.431918851577553
+	Unique values: 407
+	5 most frequent values:
+		6.0:	47
+		10.0:	43
+		11.0:	40
+		7.0:	39
+		12.0:	34
+  9. Original_longitude
+	<class 'float'>
+	Nulls: False
+	Min: -190.0
+	Max: 179.0
+	Sum: -12107.100000000019
+	Mean: -7.468908081431227
+	Median: 9.0
+	Standard Deviation: 91.18568419752538
+	Unique values: 581
+	5 most frequent values:
+		36.0:	29
+		35.0:	23
+		34.0:	22
+		31.0:	20
+		28.0:	20
+ 10. glottocode
+	<class 'str'>
+	Nulls: True
+	Unique values: 1303
+	5 most frequent values:
+		west2622:	20
+		utee1244:	14
+		nort2955:	10
+		mono1275:	8
+		nort1551:	8
+	Max length: 8
+ 11. Glottolog_name
+	<class 'str'>
+	Nulls: True
+	Unique values: 1303
+	5 most frequent values:
+		Western Shoshoni:	20
+		Ute:	14
+		Northern Shoshoni:	10
+		Mono (USA):	8
+		North Northern Paiute:	8
+	Max length: 43
+ 12. ISO_code
+	<class 'str'>
+	Nulls: True
+	Unique values: 1095
+	5 most frequent values:
+		mnr:	8
+		par:	7
+		mey:	6
+		crj:	5
+		yuk:	5
+	Max length: 4
+ 13. Language_family
+	<class 'str'>
+	Nulls: True
+	Unique values: 182
+	5 most frequent values:
+		Atlantic-Congo:	314
+		Austronesian:	133
+		Uto-Aztecan:	111
+		Afro-Asiatic:	103
+		Athapaskan-Eyak-Tlingit:	64
+	Max length: 24
+ 14. Precipitation
+	<class 'float'>
+	Nulls: False
+	Min: 1.115166667
+	Max: 547.9481667
+	Sum: 158746.87566653092
+	Mean: 97.93144704906287
+	Median: 82.39916667
+	Standard Deviation: 75.03330218761879
+	Unique values: 1397
+	5 most frequent values:
+		81.08633333:	6
+		102.6308333:	6
+		72.78:	5
+		93.93233333:	5
+		179.131:	5
+ 15. Comment_Monthly_Mean_Precipitation
+	<class 'str'>
+	Nulls: True
+	Unique values: 31
+	Max length: 127
+
+Row count: 1621
+```
+
+Notes:
+- `Society_id` is a unique field, thus, the dataset lists one row per distinct society.
+- `glottocode` is not unique, though. So multiple societies may share the same `glottocode` value.
 
 
 ## Next section

@@ -1,0 +1,91 @@
+---
+title: "Models and hypotheses"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+Sample and population
+---
+At this point you are maybe wondering how do you construct the probabilities and distributions for your variables of interest. The definition I gave before ("repeat the experiment infinite times and then count the fraction of times it has a particular value") has obviously no practical value at all.
+
+Unless you have some way of knowing the *real* probabilities of events --- [there might be some extra-scientific methods to do so](https://en.wikipedia.org/wiki/Divination) --- the most likely scenario is that you are stuck with data about the events. If you wanted to estimate the probability of finding a language with object-verb order in the World Atlas of Language Structures (WALS) then you might probably just count the fraction of all languages that have that property,
+
+```{r}
+d<-read.csv("data/WALS_ObjectVerbOrder.csv", stringsAsFactors = F)
+round(sum(d$ObjectVerbOrder=="OV",na.rm=T)/sum(d$ObjectVerbOrder!="<NA>",na.rm=T),3)
+```
+
+So we would like to conclude that the probability of finding an OV language is about 0.47. At this point it makes sense to ask to ourselves whether the probability we are building aims to capture what happens in our (limited) data set or what would be a good guess about all contemporary languages. Those two aspects are connected --- if you had to bet what is the probability of picking *any* current language and find that it is OV you will guess that the number is unlikely to be extremely different from what we calculated before --- it won't be 0, 0.01, 0.98 or 1, but perhaps some number between 0.4 and 0.5. 
+
+To mark this difference we say that our dataset constitutes a **sample** of a larger **population**. While we can only compute, estimate and conjecture based on the sample, ultimatelly our goal is to generalize our results to the population.
+
+Statistical models
+---
+
+Probability theory is the language of statistics, and we have just refreshed the very basics of it. The actual science starts with the development of **statistical models**; explicit proposals about how the probabilities of our studied variables are or how do they relate to each other. Importantly, statistical models are built to represent what happens in populations, not samples --- there is no need of a statistical model of our sample just for the simple reason you know everything you can know about it. In the next section we will see how we determine whether a statistical model for a population is suitable or not based on the data from a sample.
+
+While statistical models can be extremely sophisticated, they do not need to. For instance, we could have proposed the following model for the problem just discussed:
+
+*M0: the probability of a language being OV is 0.47* 
+
+Let's go back to the example of verb-object and adposition order. We have known for a long time that these two typological variables are related to each other, but how? Different statistical models might all coincide on this observational fact, but have different underlying statistical dependencies built-in. This might sound complex or alien, but actually the first person to look systematically at relations between typological variables --- [Joseph Greenberg](https://en.wikipedia.org/wiki/Joseph_Greenberg) --- proposed two flavours of statistical models for the relations between two variables. Some of Greenberg's universals are bidirectional implicationals, in which both variables are associated in a symmetric fashion, as for instance in the case of the order of adpositions and the order of genitive and nouns --- only two combinations (NGen & prepositions and GenN and postpositions) are overwhelmingly attested. The rest of Greenberg's universals are undirectional, meaning that only one of the two variables is informative about the other; for example languages with VSO canonical order tend to be prepositional, though this does not claim that all prepositional languages will be VSO: prepositions occur with virtually all other word order combinations, prominently SVO.
+
+Regression and classification
+---
+
+Regression and classification --- which are basically the same idea, but applied to numerical and nominal response variables, respectively--- are perhaps the most well-known classes of statistical models. Their main goal is to offer the best guess of one variable --- the **response** or **dependent** variable --- given the values of some other(s), called **independent** or **predictor** variables. The Greenberg's universals we just reviewed will be typical examples of classification.
+
+Let's tap on anthropological variables from D-PLACE for studying regression now --- we'll take a look at the relation between the intensity of agricultural practices --- an ordered variable between 0 (no agriculture) to 6 (very intense agricultural practices) --- and the distance to the Equator. We suspect that the farther we are from the Equator, the less likely human groups are to rely on agriculture.
+
+```{r, echo=FALSE,fig.align='center'}
+dplace.agrlat<-read.csv("data/dplace.agrlat.csv",stringsAsFactors = F)
+plot(Agriculture~abs(Latitude), xlab="Absolute latitude",ylab="Intensity of agriculture",data=dplace.agrlat)
+```
+
+The data looks a bit messy, but suppose that we are interested in the overall relation between the variables ---whether a change in one leads to a systematic change in the other. A classic (though suboptimal) way of looking at the data is to propose a simple **linear model** :
+
+$$ \textrm{AGR} = \alpha + \beta \cdot \textrm{LAT} $$
+
+where AGR and LAT are the intensity of agriculture and the absolute latitude, and $\alpha$ and $\beta$ are numbers to be determined. The interpretation of this model is straightforward: $\alpha$ will be the value of AGR exactly at the Equator, and $\beta$ will be the slope of the relation --- how many units of AGR increase or decrease per each unit of LAT.
+
+If we fit this particular model to the data, we find this:
+
+```{r, echo=FALSE,fig.align='center'}
+dplace.agrlat<-read.csv("data/dplace.agrlat.csv",stringsAsFactors = F)
+plot(Agriculture~abs(Latitude), xlab="Absolute latitude",ylab="Intensity of agriculture",data=dplace.agrlat)
+m<-lm(Agriculture~abs(Latitude),data=dplace.agrlat)
+abline(m,lwd=3,col="red")
+```
+
+It looks like we could be right, since the slope is negative. Concretelly, the best slope for that relation is given by
+
+```{r,echo=FALSE}
+dplace.agrlat<-read.csv("data/dplace.agrlat.csv",stringsAsFactors = F)
+m<-lm(Agriculture~abs(Latitude),data=dplace.agrlat)
+m$coefficients
+```
+
+Cleary, the model we proposed is very rough and only mimics the general tendency of the data. Regression and classification models have a second component, though, which is the description of the variation around the best guess. Usually regression models specify the tendency as the mean value of the response and the variation around that value is specified as a particular distribution.
+This is crucial, but for the purpose of this tutorial it will be enough to understand that both aspects of regression might be independent.
+
+Finally, it is timely to mention that most regression and classification methods assume that the datapoints used are **independent**, which roughly means that *in principle* we have no reason to believe that some datapoints will be systematically similar to each other. Why this might be the case? In our example it might be that some of the datapoints come from different yet culturally related societies --- for instance, Austronesian societies depend mostly on agriculture and fishing, and they share similar technology (in particular [outstanding sailing developments that allow them to spread across the Pacific](http://press.anu.edu.au/wp-content/uploads/2011/05/ch0740.pdf)). So, even if we had several datapoints from Austronesian societies, we will expect that they will have similar constraints and affordances when comes to determining how intense their agricultural practices will be at a given distance from the Equator. 
+
+Naturally, most data in our fields is not independent. How do we deal with this? You'll find out during the QMSS :)
+
+Competing hypotheses
+---
+
+The construction of a statistical model is only the first step. I mentioned before that there is a crucial difference between the sample we observe and the population we attempt to capture with our models. If we were in posession of the whole population, we could just check directly whether a particular model is suitable (or isn't). But we don't, so we expect that the individual samples will differ with respect to the population. How much, it depends on several factors --- the sampling strategy and the actual structure of the population --- but in general, the larger our sample is, the more faithfuly it will represent the population.
+
+So, the properties of the samples might differ from that of the population. Then, rather than constructing a single model, we will attempt to construct several models in such a way that we could later test them and find out which is the most suitable. In the agriculture-latitude example this could have amounted to propose, for instance, several linear models with different slopes and intercepts. Or we could have proposed other, non-linear models to compare with.
+
+Sometimes we posses external evidence about how likely are those models to be true. Maybe you came across with older research in which they convinced you that some particular configuration really fits the data. In the context of the QMSS, this idea will play a crucial role in the forthcoming lectures on phylogenetic inference: given some cultural or linguistic data one could attempt to model the conjectured genealogical tree that the relevant human groups followed, but we already know some facts about human history. For instance, if an inferred tree told us that the Romance languages had a common ancestor just a century ago we will for sure discard that particular model given the overwhelming historiographic evidence that such event occurred [over a thousand years ago](https://en.wikipedia.org/wiki/Romance_languages#History).
+
+Null hypothesis
+---
+
+There is an another take on competing models. While many models might indicate different degrees of dependencies or structures in our data, there is often one particular scenario that would be deemed uninteresting or a non-result, the **null hypothesis**. This might seem vague --- actually it *is* a vague notion to spell out in general --- so let's flesh out this by looking concretelly at the dependency between agriculture and distance from the Equator.
+
+As we have seen, the sign of the inferred slope tells us whether agriculture becomes more intense (+) or decreases (-) with absolute latitude. What if we had inferred a slope of *exactly* zero? This is a special case, since it means there is *no* dependency between the variables --- at least, no dependency that could be captured by a linear relation. So if your aim is to show that your data support that there is *some* linear dependency between the variables, the obvious competing hypothesis is that the true slope is zero.

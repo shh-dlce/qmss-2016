@@ -1,0 +1,83 @@
+---
+title: "Probability and distributions"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+Defining probabilities
+--
+
+
+Measuring how likely are certain events is central to statistics. In everyday life we measure probabilities as percentages, but it is more practical to use numbers between 0 and 1: the closer to 1 the probability of an event is, the more likely to occur - if it is exactly 1 it means it will happen for sure, and a probability of 0 means it will not occur. While the notion of probability seems quite natural, what *precisely* those numbers mean is a matter of philosophical debate. Traditionally, probabilities are defined as the number of times something occurs if you repeat an *experiment* an infinite number of times: hence if we say that the probability of getting tails after tossing a far coin is 0.5, that could be interpreted as saying: "if you toss the coin an infinite number of times, half of the time it will be tails".  
+
+Probabilities refer to one or more events that belong to a **sample space**, which is simply the set of all things that could take place within the scope of our probability statement. So for instance, if we ask *what is the probability of rain today in Jena?*, the relevant sample space associated with the question would comprise only two elements: either (1) it rains or (2) it doesn't rain. But this is a boring example, and most of cases we will come across during the QMSS will involve huge or even infinite sample spaces. If we ask *how many mm of rain will Jena receive today?* then the sample space will be composed by all positive numbers, although probably most of those numbers will have a probability of strictly zero - in case you are curious, [the maximum ever registered in a day was 1,825 mm in the French Reunion island](https://en.wikipedia.org/wiki/List_of_weather_records#Rain). Importantly, the sum of the probabilities of all events in the sample space must add up to 1 --- this is equivalent to say that *something* will happen.
+
+We usually write probabilities in the following way: $Pr(X=x)$. The big X --- technically a **random variable** although we won't insist with this concept --- can be equated to the question that the probability answers, and the small x would be the answer. All of these would be good descriptions of probabilities:
+
+$$\Pr(\textrm{Will it rain in Jena today?}=\textrm{yes})=0.2$$
+$$\Pr(\textrm{How many mm will rain in Jena today?}=0.01)=0.003$$
+$$\Pr(\textrm{How many mm will rain in Jena today?}=5000)=0$$
+
+Distributions
+--
+
+The collection of all probabilities paired with their corresponding sample elements is called a **probability distribution**, or **distribution** for short. One example of a distributions would be:
+
+$$\Pr(\textrm{Will it rain in Jena today?}=\textrm{yes})=0.2$$
+$$\Pr(\textrm{Will it rain in Jena today?}=\textrm{no})=0.8$$
+
+This describes all the possibilities, and the sum of all the probabilities add up to one. 
+
+Very often, when the sample space consists of numbers --- this is, when the variable is numerical--- the relation between the elements and their probabilities can be expressed by a function. A hypothetical case would be:
+
+$$\Pr(\textrm{How many mm will rain in Jena today?}=a)=e^{-a}$$
+
+In R this would look like this
+
+```{r, echo=FALSE,fig.align='center'}
+x<-seq(0,10,0.01)
+plot(x=x,y=exp(-x),type="l",xlab="mm of rain",ylab="Probability")
+```
+
+There are many important distributions that can be described in this way, and there are a few usual suspects that keep popping out in data. For instance, the word frequency distribution can be approximately captured by [Zipf's law](https://en.wikipedia.org/wiki/Zipf%27s_law), which says that the frequency of a word and its ranking (i.e. whether the word is the 1st, 2nd, 3rd... most frequent word) are inversely proportional, and this relation as well holds for all sorts of systems, from allele frequency distributions to earthquake sizes and the number of species within a taxon. The next figure shows an example of such a power-law distribution ([with the axis logarithmically tranformed to facilitate visual inspection](https://en.wikipedia.org/wiki/Log%E2%80%93log_plot))
+
+```{r, echo=FALSE,fig.align='center'}
+x<-seq(1,40)
+norm<-sum(1/x)
+plot(x=x,y=1/(x*norm),xlab="Rank",ylab="Probability",log="xy")
+```
+
+At this point you should have noticed that the last two graphs differ in how they are displayed: the first is a continuous line and the second a sequence of dots. This is because in the first example *any* positive number has an associated probability, whereas in the second case only positive integer numbers have a probability --- there's no rank 1.26, for instance. 
+
+Undoubtebly the most famous distribution of all, the normal (or Gaussian or bell curve) distribution has an even larger scope across the sciences --- IQ, thermal noise in electrical devises, chest size of Scottish soldiers, and a very long etc. Why normal distributions are ubiquituous is [an exciting chapter in the history of probability](http://aidanlyon.com/media/publications/Lyon-normal_distributions.pdf).
+
+```{r, echo=FALSE,fig.align='center'}
+x<- seq(-50,50,length=1000)
+y<-dnorm(x,mean=10,sd=10)
+plot(x,y, type="l", lwd=1,xlab="Values",ylab="Probability")
+```
+
+Descriptive stats
+---
+
+Sometimes we are interested in summarizing the information of the distribution of a numerical variable with just a few numbers. The most basic of such numbers is the **mean** value of the distribution, which answers the question *"if I do this experiment an infinite number of times, what would be the average number I will get?"* For many important distributions --- like the normal distribution --- the mean coincides with the **mode**, namely the most likely value. But definining the most characteristic value of a distribution is usually not enough, since you would also like to describe how much data varies around that characteristic value. A typical measure of that is the **variance** (or its squared root, the **standard deviation**), which tells what is the typical distance from any data point to the mean value.
+
+It is important to note that when your distribution is not about numbers but nominal variables (like the dichotomous variable will/won't rain in Jena) then only the mode can be defined. There's no notion of mean or variance for those variables. There exist other descriptive statistics that can be applied to nominal variables, like the [entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)), though. 
+
+Multiple variables
+---
+
+Probabilities can involve several variables --- or in other words, they can answer several questions at the same time. For instance, a typologist might be interested in the question *how likely is for a language to have a particular verb-object and adposition order?* Formally we can represent this as before, simply separating both elements of the question by a semicolon: $$\Pr(\textrm{what is the verb-object order?}=a;\textrm{what is the adposition order?}=b)$$
+Since both verb-object and adposition orders can be described by individual probability distributions, the distribution that combines both is the **joint probability distribution**. 
+
+Joint probability distributions are the starting point for thinking statistically about associations and dependencies between variables. If two variables are indeed independent from each other, then the joint probability distribution would be the same as the product of the individual distributions for each variable; in this case
+
+$$\Pr(\textrm{what is the verb-object order?}=a;\textrm{what is the adposition order?}=b)$$ $$=\Pr(\textrm{what is the verb-object order?}=a)\Pr(\textrm{what is the adposition order?}=b)$$
+
+Coloquially, this means that we don't learn anything about one variable if we know something about the other. What happen when we are interested in describing one variable given that we already know another variable? We can represent this by means of **conditional probabilities**, which are noted almost identically to joint probabilities, with the difference that a vertical bar "|" divides what we want to know on the left to what we already know on the right; following the case just discussed, one example could be
+
+$$ \Pr(\textrm{what is the verb-object order?}=a  | \textrm{what is the adposition order?}=b)) $$
+
+This should be read as *what is the probability that a language has verb-object order "a" if we know that the adposition order is "b"?*

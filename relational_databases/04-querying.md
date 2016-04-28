@@ -11,6 +11,11 @@ sqlite> SELECT count(*) FROM languoids;
 18357
 ```
 
+Notes:
+- Statements or queries in SQL are terminated by a `;`.
+- While SQL is case insensitive, it is customary to write SQL keywords like `SELECT`, `FROM`
+  and `WHERE` in uppercase, to clearly distinguish them from identifiers for tables and columns.
+
 or by typing SQL
 into SQLite Manager's *Execute SQL* pane.
 
@@ -605,11 +610,8 @@ in R!
 Notes:
 - A standardized query language like SQL allows re-using the same analyses tools with different
   database managers, and even with different relational databases.
-- While SQL is case insensitive, it is customary to write SQL keywords like `SELECT`, `FROM`
-  and `WHERE` in uppercase, to clearly distinguish them from identifiers for tables and columns.
 - There is no defined default ordering of rows returned by a query. So you should always specify
   an explicit order to make query results replicable.
-- SQL commands are terminated with a semicolon.
 - The fields or values to be selected as well as the tables or expressions from which to select
   can be aliased using `AS`, to allow referencing from other parts of a query.
 - SQL provides a standardized, somewhat portable way to declaratively describe data manipulation.

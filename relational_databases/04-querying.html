@@ -66,6 +66,14 @@ Enter SQL statements terminated with a <span class="pl-s"><span class="pl-pds">"
 sqlite<span class="pl-k">&gt;</span> <span class="pl-k">SELECT</span> <span class="pl-c1">count</span>(<span class="pl-k">*</span>) <span class="pl-k">FROM</span> languoids;
 <span class="pl-c1">18357</span></pre></div>
 
+<p>Notes:</p>
+
+<ul>
+<li>Statements or queries in SQL are terminated by a <code>;</code>.</li>
+<li>While SQL is case insensitive, it is customary to write SQL keywords like <code>SELECT</code>, <code>FROM</code>
+and <code>WHERE</code> in uppercase, to clearly distinguish them from identifiers for tables and columns.</li>
+</ul>
+
 <p>or by typing SQL
 into SQLite Manager's <em>Execute SQL</em> pane.</p>
 
@@ -680,11 +688,8 @@ in R!</p>
 <ul>
 <li>A standardized query language like SQL allows re-using the same analyses tools with different
 database managers, and even with different relational databases.</li>
-<li>While SQL is case insensitive, it is customary to write SQL keywords like <code>SELECT</code>, <code>FROM</code>
-and <code>WHERE</code> in uppercase, to clearly distinguish them from identifiers for tables and columns.</li>
 <li>There is no defined default ordering of rows returned by a query. So you should always specify
 an explicit order to make query results replicable.</li>
-<li>SQL commands are terminated with a semicolon.</li>
 <li>The fields or values to be selected as well as the tables or expressions from which to select
 can be aliased using <code>AS</code>, to allow referencing from other parts of a query.</li>
 <li>SQL provides a standardized, somewhat portable way to declaratively describe data manipulation.

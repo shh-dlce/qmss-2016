@@ -39,6 +39,14 @@ $ sqlite3 qmss.sqlite .dump > qmss.sql
 $ sqlite3 qmss_restored.sqlite < qmss.sql
 ```
 
+Notes:
+- Since SQL includes a DDL, the SQL dump can not only contain the raw data, but also
+  descriptions of all necessary DB objects like tables, columns and views.
+- Thus, the second command above will create an SQLite database from scratch, which
+  after running the dumped SQL behaves just like the one the dump was created from.
+- Unfortunately - despite SQL being a specified standard - such SQL dumps are not really
+  portable across SQL database systems.
+
 This will give us all the advantages of version control to make changes to our
 data transparent. E.g. updating data using SQL like
 

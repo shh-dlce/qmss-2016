@@ -57,6 +57,9 @@
                 <h1>
 <a id="user-content-querying-the-database" class="anchor" href="#querying-the-database" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Querying the database</h1>
 
+<h2>
+<a id="user-content-executing-sql" class="anchor" href="#executing-sql" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Executing SQL</h2>
+
 <p>Now we can inspect the data using SQL queries either running <code>sqlite3 qmss.sqlite</code> </p>
 
 <div class="highlight highlight-source-sql"><pre>$ sqlite3 <span class="pl-c1">qmss</span>.<span class="pl-c1">sqlite</span> 
@@ -79,10 +82,13 @@ into SQLite Manager's <em>Execute SQL</em> pane.</p>
 
 <p><a href="images/sqlitemanager-execute-sql.png" target="_blank"><img src="images/sqlitemanager-execute-sql.png" alt="SQLite Manager's *Execute SQL* pane" style="max-width:100%;"></a></p>
 
+<h2>
+<a id="user-content-select" class="anchor" href="#select" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SELECT</h2>
+
 <p>Querying or selecting rows in a table is done using SQL's <code>SELECT</code> command, specifying the 
 fields you want to retrieve and the name of the table, e.g.</p>
 
-<div class="highlight highlight-source-sql"><pre><span class="pl-k">SELECT</span> glottocode, name, macroarea <span class="pl-k">FROM</span> languoids;</pre></div>
+<div class="highlight highlight-source-sql"><pre><span class="pl-k">SELECT</span> glottocode, name, macroarea <span class="pl-k">FROM</span> languoids <span class="pl-k">WHERE</span> level <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>language<span class="pl-pds">'</span></span> <span class="pl-k">LIMIT</span> <span class="pl-c1">5</span>;</pre></div>
 
 <p>will return results as follows:</p>
 
@@ -91,16 +97,6 @@ fields you want to retrieve and the name of the table, e.g.</p>
 <th>glottocode</th>
 <th>name</th>
 <th>macroarea</th>
-</tr>
-<tr>
-<td>aala1237</td>
-<td>Aalawa</td>
-<td>Papunesia</td>
-</tr>
-<tr>
-<td>aant1238</td>
-<td>Aantantara</td>
-<td>Papunesia</td>
 </tr>
 <tr>
 <td>aari1239</td>
@@ -113,11 +109,30 @@ fields you want to retrieve and the name of the table, e.g.</p>
 <td>Africa</td>
 </tr>
 <tr>
-<td>aata1238</td>
-<td>Aatasaara</td>
+<td>abad1241</td>
+<td>Abadi</td>
+<td>Papunesia</td>
+</tr>
+<tr>
+<td>abag1245</td>
+<td>Abaga</td>
+<td>Papunesia</td>
+</tr>
+<tr>
+<td>abai1240</td>
+<td>Abai Sungai</td>
 <td>Papunesia</td>
 </tr>
 </table>
+
+<p>We used a <code>WHERE</code> clause to filter the set of languoids by a certain value for one field.
+While the field descriptions following the <code>SELECT</code> keyword specify a filtering of the
+fields of result rows, the <code>WHERE</code> clause filters result rows from the set of all rows
+defined after the <code>FROM</code> keyword (and the <code>LIMIT</code> clause restricts the number of result rows):</p>
+
+<p><a href="images/sql-filter.png" target="_blank"><img src="images/sql-filter.png" alt="SQL filter" style="max-width:100%;"></a></p>
+
+<p>Image taken from <a href="http://swcarpentry.github.io/sql-novice-survey/03-filter.html">software carpentry</a></p>
 
 <p>SQL provides keywords and construct to manipulate queries allowing</p>
 
@@ -130,6 +145,9 @@ fields you want to retrieve and the name of the table, e.g.</p>
 <a href="http://swcarpentry.github.io/sql-novice-survey/07-join.html">combining data</a>
 some of which we will encounter below when examining the data in our two tables.</li>
 </ul>
+
+<h2>
+<a id="user-content-exploring-data" class="anchor" href="#exploring-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exploring data</h2>
 
 <p>We want to combine information about macroareas from table <code>languoids</code> with information about
 tones in table <code>phonemes</code>.</p>
@@ -190,17 +208,15 @@ Australia
 <li>
 <code>null</code> corresponds to <code>NA</code> in R.</li>
 <li>
-<code>null</code> is not really a value, though, e.g.
-<code>sql
-sqlite&gt; SELECT count(DISTINCT macroarea) FROM languoids;
-6
-sqlite&gt; SELECT count(*) FROM languoids WHERE macroarea = null;
-0
-sqlite&gt; SELECT count(*) FROM languoids WHERE macroarea is null;
-60
-</code>
-</li>
+<code>null</code> is not really a value, though, e.g.</li>
 </ul>
+
+<div class="highlight highlight-source-sql"><pre>  sqlite<span class="pl-k">&gt;</span> <span class="pl-k">SELECT</span> <span class="pl-c1">count</span>(DISTINCT macroarea) <span class="pl-k">FROM</span> languoids;
+  <span class="pl-c1">6</span>
+  sqlite<span class="pl-k">&gt;</span> <span class="pl-k">SELECT</span> <span class="pl-c1">count</span>(<span class="pl-k">*</span>) <span class="pl-k">FROM</span> languoids <span class="pl-k">WHERE</span> macroarea <span class="pl-k">=</span> <span class="pl-k">null</span>;
+  <span class="pl-c1">0</span>
+  sqlite<span class="pl-k">&gt;</span> <span class="pl-k">SELECT</span> <span class="pl-c1">count</span>(<span class="pl-k">*</span>) <span class="pl-k">FROM</span> languoids <span class="pl-k">WHERE</span> macroarea is <span class="pl-k">null</span>;
+  <span class="pl-c1">60</span></pre></div>
 
 <p>We have used the aggregation function <code>count</code> to aggregate information from all rows of the
 result set.</p>
@@ -218,15 +234,6 @@ How many of these are there?</p>
 <div class="highlight highlight-source-sql"><pre>sqlite<span class="pl-k">&gt;</span> <span class="pl-k">SELECT</span> <span class="pl-c1">count</span>(<span class="pl-k">*</span>) <span class="pl-k">FROM</span> phonemes <span class="pl-k">WHERE</span> tone <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>+<span class="pl-pds">'</span></span>;
 <span class="pl-c1">2007</span></pre></div>
 
-<p>We used a <code>WHERE</code> clause to filter the set of phonemes by a certain value for one field.
-While the field descriptions following the <code>SELECT</code> keyword specify a filtering of the
-fields of result rows, the <code>WHERE</code> clause filters result rows from the set of all rows
-defined after the <code>FROM</code> keyword:</p>
-
-<p><a href="images/sql-filter.png" target="_blank"><img src="images/sql-filter.png" alt="SQL filter" style="max-width:100%;"></a></p>
-
-<p>Image taken from [software carpentry](<a href="http://swcarpentry.github.io/sql-novice-survey/03-filter.html">http://swcarpentry.github.io/sql-novice-survey/03-filter.html</a>)</p>
-
 <p>In how many languages do they occur?</p>
 
 <div class="highlight highlight-source-sql"><pre>sqlite<span class="pl-k">&gt;</span> <span class="pl-k">SELECT</span> <span class="pl-c1">count</span>(distinct LanguageCode) <span class="pl-k">FROM</span> phonemes <span class="pl-k">WHERE</span> tone <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>+<span class="pl-pds">'</span></span>;
@@ -242,7 +249,7 @@ or more precisely by inventory and then count the number of grouped phonemes as 
 <span class="pl-k">WHERE</span> 
     tone <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>+<span class="pl-pds">'</span></span> 
 <span class="pl-k">GROUP BY</span> 
-    InventoryID, LanguageCode;
+    InventoryID, LanguageCode
 <span class="pl-k">ORDER BY</span> tones <span class="pl-k">DESC</span>;</pre></div>
 
 <table>
@@ -298,6 +305,9 @@ aggregates the data in the rows of one group.</li>
 we compare this with the <a href="http://phoible.org/inventories">PHOIBLE website</a>:</p>
 
 <p><a href="images/phoible_tones.png" target="_blank"><img src="images/phoible_tones.png" alt="PHOIBLE inventories with tones" style="max-width:100%;"></a></p>
+
+<h2>
+<a id="user-content-storing-intermediate-results-view" class="anchor" href="#storing-intermediate-results-view" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Storing intermediate results: VIEW</h2>
 
 <p>A convenient way to store intermediate results (in a dynamic way) is via views, which behave
 much like tables. You can create a view in SQLite running the following SQL:</p>
@@ -374,9 +384,20 @@ required types. So the <code>cast</code> function is used above to make sure we 
 point division, rather than integer division (with remainder).</li>
 </ul>
 
+<h2>
+<a id="user-content-selecting-data-from-more-than-one-table-join" class="anchor" href="#selecting-data-from-more-than-one-table-join" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Selecting data from more than one table: JOIN</h2>
+
 <p>If we want to compare tone languages with languages without tone, we should include all
 other languages present in PHOIBLE giving them a number of tones of <code>0</code>. This can be done
-using a special kind of <code>JOIN</code>, a <a href="https://en.wikipedia.org/wiki/Join_%28SQL%29#Left_outer_join"><code>LEFT OUTER JOIN</code></a>:</p>
+using a <code>JOIN</code>.</p>
+
+<p><a href="images/sql_joins.png" target="_blank"><img src="images/sql_joins.png" alt="SQL joins" style="max-width:100%;"></a></p>
+
+<p>We want to create a result set with one row for each language in <code>phonemes</code> and a column giving
+the number of tones as <code>0</code>, if the language does not appear in <code>tones_by_language</code> and
+<code>tones_by_language.tones</code> else.</p>
+
+<p>So the kind of <code>JOIN</code> needed here is a <a href="https://en.wikipedia.org/wiki/Join_%28SQL%29#Left_outer_join"><code>LEFT OUTER JOIN</code></a>:</p>
 
 <div class="highlight highlight-source-sql"><pre><span class="pl-k">SELECT</span> 
     <span class="pl-c1">p</span>.<span class="pl-c1">LanguageCode</span>, coalesce(<span class="pl-c1">t</span>.<span class="pl-c1">tones</span>, <span class="pl-c1">0</span>) <span class="pl-k">AS</span> tones
@@ -415,6 +436,10 @@ a view:</p>
     <span class="pl-k">ON</span>
         <span class="pl-c1">p</span>.<span class="pl-c1">LanguageCode</span> <span class="pl-k">=</span> <span class="pl-c1">t</span>.<span class="pl-c1">LanguageCode</span>;</pre></div>
 
+<h2>
+<a id="user-content-joining-languoids-and-phonemes" class="anchor" href="#joining-languoids-and-phonemes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Joining <code>languoids</code> and <code>phonemes</code>
+</h2>
+
 <p>We can only combine information from two tables if they have something in common. In our case,
 <code>languoids.isocodes</code> stores (potentially multiple) ISO codes associated with a lnaguoid, and
 <code>tones.LanguageCode</code> stores single ISO codes. To match records of the two tables, we have to
@@ -437,6 +462,10 @@ are all distinct:</p>
 
 <p>Good! Having established that <code>languoids.isocodes</code> does only hold unique three-letter
 ISO codes (or <code>null</code>), we can use this field to <code>JOIN</code> the two tables:</p>
+
+<h2>
+<a id="user-content-joining-languoids-and-precipitation" class="anchor" href="#joining-languoids-and-precipitation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Joining <code>languoids</code> and <code>precipitation</code>
+</h2>
 
 <p>The D-PLACE data is coded for ISO codes as well as for Glottocodes, thus we have two alternatives
 for joining. Let's see which one is prefereable:</p>

@@ -97,7 +97,8 @@ From the [PHOIBLE site](http://phoible.org/contributors/UPSID) we also learn tha
 
 > UPSID inventories contain no descriptions of tone.
 
-Thus, these inventories must be ignored when analyzing the distribution of tone languages.
+Thus, the inventories from the UCLA Phonological Segment Inventory Database must be ignored 
+when analyzing the distribution of tone languages.
 (Erroneously including UPSID inventories does have an impact on the analysis as can
 be gleaned from 
 [this commit](https://github.com/shh-dlce/qmss-2016/commit/7cf7976d92db675d95dac6412c2a80a8edee6137).)

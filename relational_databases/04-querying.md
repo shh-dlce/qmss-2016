@@ -1,5 +1,7 @@
 # Querying the database
 
+## Executing SQL
+
 Now we can inspect the data using SQL queries either running `sqlite3 qmss.sqlite` 
 
 ```sql
@@ -22,11 +24,13 @@ into SQLite Manager's *Execute SQL* pane.
 ![SQLite Manager's *Execute SQL* pane](images/sqlitemanager-execute-sql.png)
 
 
+## SELECT
+
 Querying or selecting rows in a table is done using SQL's `SELECT` command, specifying the 
 fields you want to retrieve and the name of the table, e.g.
 
 ```sql
-SELECT glottocode, name, macroarea FROM languoids;
+SELECT glottocode, name, macroarea FROM languoids WHERE level = 'language' LIMIT 5;
 ```
 
 will return results as follows:
@@ -36,14 +40,6 @@ will return results as follows:
 <TH>name</TH>
 <TH>macroarea</TH>
 </TR>
-<TR><TD>aala1237</TD>
-<TD>Aalawa</TD>
-<TD>Papunesia</TD>
-</TR>
-<TR><TD>aant1238</TD>
-<TD>Aantantara</TD>
-<TD>Papunesia</TD>
-</TR>
 <TR><TD>aari1239</TD>
 <TD>Aari</TD>
 <TD>Africa</TD>
@@ -52,11 +48,28 @@ will return results as follows:
 <TD>Aasax</TD>
 <TD>Africa</TD>
 </TR>
-<TR><TD>aata1238</TD>
-<TD>Aatasaara</TD>
+<TR><TD>abad1241</TD>
+<TD>Abadi</TD>
+<TD>Papunesia</TD>
+</TR>
+<TR><TD>abag1245</TD>
+<TD>Abaga</TD>
+<TD>Papunesia</TD>
+</TR>
+<TR><TD>abai1240</TD>
+<TD>Abai Sungai</TD>
 <TD>Papunesia</TD>
 </TR>
 </table>
+
+We used a `WHERE` clause to filter the set of languoids by a certain value for one field.
+While the field descriptions following the `SELECT` keyword specify a filtering of the
+fields of result rows, the `WHERE` clause filters result rows from the set of all rows
+defined after the `FROM` keyword (and the `LIMIT` clause restricts the number of result rows):
+
+![SQL filter](images/sql-filter.png)
+
+Image taken from [software carpentry](http://swcarpentry.github.io/sql-novice-survey/03-filter.html)
 
 SQL provides keywords and construct to manipulate queries allowing
 - [sorting](http://swcarpentry.github.io/sql-novice-survey/02-sort-dup.html)
@@ -65,6 +78,9 @@ SQL provides keywords and construct to manipulate queries allowing
 - [aggregating](http://swcarpentry.github.io/sql-novice-survey/06-agg.html)
 - [combining data](http://swcarpentry.github.io/sql-novice-survey/07-join.html)
 some of which we will encounter below when examining the data in our two tables.
+
+
+## Exploring data
 
 We want to combine information about macroareas from table `languoids` with information about
 tones in table `phonemes`.
@@ -118,14 +134,14 @@ Australia
 Notes:
 - `null` corresponds to `NA` in R.
 - `null` is not really a value, though, e.g.
-  ```sql
+```sql
   sqlite> SELECT count(DISTINCT macroarea) FROM languoids;
   6
   sqlite> SELECT count(*) FROM languoids WHERE macroarea = null;
   0
   sqlite> SELECT count(*) FROM languoids WHERE macroarea is null;
   60
-  ```
+```
 
 We have used the aggregation function `count` to aggregate information from all rows of the
 result set.
@@ -147,15 +163,6 @@ sqlite> SELECT count(*) FROM phonemes WHERE tone = '+';
 2007
 ```
 
-We used a `WHERE` clause to filter the set of phonemes by a certain value for one field.
-While the field descriptions following the `SELECT` keyword specify a filtering of the
-fields of result rows, the `WHERE` clause filters result rows from the set of all rows
-defined after the `FROM` keyword:
-
-![SQL filter](images/sql-filter.png)
-
-<p style="font-size: small;">Image taken from [software carpentry](http://swcarpentry.github.io/sql-novice-survey/03-filter.html)</p>
-
 In how many languages do they occur?
 
 ```sql
@@ -174,7 +181,7 @@ FROM
 WHERE 
     tone = '+' 
 GROUP BY 
-    InventoryID, LanguageCode;
+    InventoryID, LanguageCode
 ORDER BY tones DESC;
 ```
 
@@ -220,6 +227,9 @@ To check our assumption that tones are coded with a `+` value for the field `ton
 we compare this with the [PHOIBLE website](http://phoible.org/inventories):
 
 ![PHOIBLE inventories with tones](images/phoible_tones.png)
+
+
+## Storing intermediate results: VIEW
 
 A convenient way to store intermediate results (in a dynamic way) is via views, which behave
 much like tables. You can create a view in SQLite running the following SQL:
@@ -297,9 +307,19 @@ Notes:
   point division, rather than integer division (with remainder).
 
 
+## Selecting data from more than one table: JOIN
+
 If we want to compare tone languages with languages without tone, we should include all
 other languages present in PHOIBLE giving them a number of tones of `0`. This can be done
-using a special kind of `JOIN`, a [`LEFT OUTER JOIN`](https://en.wikipedia.org/wiki/Join_%28SQL%29#Left_outer_join):
+using a `JOIN`.
+
+![SQL joins](images/sql_joins.png)
+
+We want to create a result set with one row for each language in `phonemes` and a column giving
+the number of tones as `0`, if the language does not appear in `tones_by_language` and
+`tones_by_language.tones` else.
+
+So the kind of `JOIN` needed here is a [`LEFT OUTER JOIN`](https://en.wikipedia.org/wiki/Join_%28SQL%29#Left_outer_join):
 
 ```sql
 SELECT 
@@ -340,6 +360,8 @@ CREATE VIEW tones AS
 ```
 
 
+## Joining `languoids` and `phonemes`
+
 We can only combine information from two tables if they have something in common. In our case,
 `languoids.isocodes` stores (potentially multiple) ISO codes associated with a lnaguoid, and
 `tones.LanguageCode` stores single ISO codes. To match records of the two tables, we have to
@@ -365,6 +387,9 @@ sqlite> SELECT count(distinct isocodes) FROM languoids WHERE length(isocodes) = 
 
 Good! Having established that `languoids.isocodes` does only hold unique three-letter
 ISO codes (or `null`), we can use this field to `JOIN` the two tables:
+
+
+## Joining `languoids` and `precipitation`
 
 The D-PLACE data is coded for ISO codes as well as for Glottocodes, thus we have two alternatives
 for joining. Let's see which one is prefereable:
@@ -397,7 +422,6 @@ CREATE VIEW precipitation_by_glottocode AS
 
 
 Now we can put our dataset together:
-
 
 
 ```sql

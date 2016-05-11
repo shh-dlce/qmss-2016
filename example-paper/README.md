@@ -13,6 +13,8 @@ In addition, we should have
   - running the analysis
   - creating figures
   - typesetting the paper
+- alternatively, a section in this README could describe how to do the above
+  in prose text.
 - a directory for
   - results of the analysis
   - figures

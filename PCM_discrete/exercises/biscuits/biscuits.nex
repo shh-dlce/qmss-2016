@@ -1,0 +1,75 @@
+#NEXUS
+[written Tue Aug 12 14:27:15 BST 2008]
+
+BEGIN TAXA;
+	DIMENSIONS NTAX=22;
+	TAXLABELS
+		Simplespongecake Bourbon Digestive Chocolatedigestive Richtea Penguin Custardcream Partyring Hobnob Jaffacake Chocchipcookie Nice Jammiedodger Figroll Minigems Pinkwafer Shortbread Garibaldi Chocolatefinger Macaroon Rusk Gingernut 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	DIMENSIONS  NCHAR=20;
+	FORMAT DATATYPE = STANDARD GAP = - MISSING = . SYMBOLS = "  0 1";
+	MATRIX
+	Simplespongecake    00000000000010100000
+	Bourbon             11101000001100010100
+	Digestive           00000100001100000001
+	Chocolatedigestive  00010100001000000001
+	Richtea             00000000001100000001
+	Penguin             11111000010000010100
+	Custardcream        11001000000100000100
+	Partyring           00000001100000000010
+	Hobnob              01000100000001000001
+	Jaffacake           00011010000010101000
+	Chocchipcookie      00100100000011000010
+	Nice                10000000000100000000
+	Jammiedodger        01001011000000001000
+	Figroll             11001010000011101000
+	Minigems            00000000110000000010
+	Pinkwafer           11001000100000000010
+	Shortbread          10000000001010000000
+	Garibaldi           10000010000000000000
+	Chocolatefinger     10010000000000000000
+	Macaroon            00000110000011000000
+	Rusk                00000100000011000000
+	Gingernut           00100100000001000010
+
+;
+
+END;
+
+BEGIN TREES;
+	TRANSLATE
+		1 Simplespongecake,
+		2 Bourbon,
+		3 Digestive,
+		4 Chocolatedigestive,
+		5 Richtea,
+		6 Penguin,
+		7 Custardcream,
+		8 Partyring,
+		9 Hobnob,
+		10 Jaffacake,
+		11 Chocchipcookie,
+		12 Nice,
+		13 Jammiedodger,
+		14 Figroll,
+		15 Minigems,
+		16 Pinkwafer,
+		17 Shortbread,
+		18 Garibaldi,
+		19 Chocolatefinger,
+		20 Macaroon,
+		21 Rusk,
+		22 Gingernut;
+	TREE shortest = (1,((21,(20,((22,11),(9,(4,(3,5)))))),(17,((18,(12,(19,(15,8)))),((7,(6,2)),(16,(13,(14,10))))))));
+
+END;
+
+
+
+
+

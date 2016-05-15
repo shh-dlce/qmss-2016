@@ -1,0 +1,36 @@
+Pico is extremely basic, but is often useful when working with Bayes Traits as 
+it can resolve problems such as line-break mismatches between PC and Mac or 
+different file formats. If your file won't import, open, or run no matter how 
+carefully you've checked it, open it in pico and save again.
+
+Using the Pico Editor: A Tipsheet
+Abbreviated from http://www.udel.edu/topics/software/general/editors/unix/pico/picotips.html
+
+To create and edit files on a central UNIX server, you can use the text-editing program called
+ "pico". Pico is a simple editor in which available options are displayed across the bottom of the screen.
+
+To create or edit a file using pico, at the UNIX prompt (represented by the % character), type
+
+pico filename
+
+and press the ENTER key. Replace filename with the name of the file you want to create or modify.
+
+Some editing options are described below:
+
+^C	Cur Pos	determine where the cursor is in the file
+^G	Get Help	go to an online help menu
+^J	Justify	justify the text in the entire paragraph
+^O	WriteOut	save the text you've written without quitting pico
+^R	Read File	include a previously written file in your current text
+^T	To Spell	 check the spelling in the file
+^V	Next Pg	 move the cursor to the next page of the file
+^W	Where is	search for character string patterns
+^Y	Prev Pg	 move to the previous page of the file
+
+Getting online help
+
+If you need help while you are working with pico, you can use online help at any point 
+by pressing the appropriate "help" option displayed at the bottom of the screen 
+(e.g., ^G to "Get Help").
+
+/eof

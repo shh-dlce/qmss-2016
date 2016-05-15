@@ -1,0 +1,37 @@
+Ancestral State Estimation
+Austronesian postmarital residence
+
+Multistate data on postmarital residence has been recoded into a binary coding scheme. In the Inferring Models exercise we will create a multistate coding scheme from the same data.
+
+This variable in the EA has the following coding assignments:
+
+*0 = missing 
+*1 = avunculocal 
+2 = AMBILOCAL: residence can be with either the kin of husband or wife, fairly even split 
+*3 = optionally avunculocal/uxurilocal
+*4 = optionally avunculocal/virilocal
+5 = MATRILOCAL: residence with matrilineal kin group of the wife 
+6 = NEOLOCAL: residence in a place not determined by kin ties of either spouse
+*7 = no common residence
+8 = PATRILOCAL: residence with patrilineal kin group of the husband
+9 = UXORILOCAL: residence with wife / wife's kin 
+10 = VIRILOCAL: residence with husband / husband's kin
+
+Note: Matrilocal is a subset of uxorilocal; similarly, patrilocal is a subset of virilocal.
+
+* a small number of societies with these variables have been removed for this demonstration
+
+This data has been recoded from the original assignments to the following:
+
+matri/uxo = 5/9 = 0
+patri/viri = 8/10 = 1
+ambi = 2 = 01
+neo = 6 = missing (-)
+
+This coding takes advantage of the fact that taxa can be assigned more than one state, so amnbilocality can be given both uxorilocal and virilocal codes. The disadvantage is that the model will only reconstruct the probability of single states, not 01 (=ambilocality). Also, as we will see, tests of correlated evolution are confined to two strictly discrete states and dual assignments are not possible. Nonetheless, it is an effective way to code polymorphic or linguistic traits: for example, a language with two possible word orders could be coded in this fashion.
+
+Note that any information about neolocality is lost as we code it as missing. We return to this issue in the Inferring Models exercises.
+
+
+
+

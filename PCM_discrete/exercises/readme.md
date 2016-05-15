@@ -1,4 +1,4 @@
-For the practical session you will need the folders  
+For the practical session you will need the files in folders  
 - models
 - correlations  
 

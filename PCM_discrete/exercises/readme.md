@@ -1,4 +1,5 @@
 For the practical session you will need the files in folders  
+- ase  
 - models
 - correlations  
 

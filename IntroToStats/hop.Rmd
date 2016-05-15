@@ -1,0 +1,69 @@
+---
+title: "Hour of power topics: missing data"
+output: html_document
+---
+
+First of all it is important to determine whether [data is missing at random or not](https://en.wikipedia.org/wiki/Missing_data#Missing_completely_at_random). If there is no structure in the missing data, one could take a number of decisions about how to impute it. Here I will focus in 
+
+Let's produce an artificial dataset:
+
+```{r,cache=F,echo=T}
+set.seed(300)
+like.maths<-sample(c("Y","N"),500,replace=T)
+sex<-sample(c("M","F"),500,replace=T)
+height<-sapply(sex,function(x) ifelse(x=="M",rnorm(1,1.80,0.2),rnorm(1,1.60,0.2)))
+education<-sample(c(1:5),500,replace=T)
+iq<-rnorm(500,100,20)
+test.data<-data.frame(sex=sex,height=height,education=education,iq=iq,like.maths=like.maths,stringsAsFactors=F)
+grade<-apply(test.data,1,function(x) 10*plogis(rnorm(1,0,2)+ifelse(x["like.maths"]=="Y",0.3,-0.3)+0.2*(as.numeric(x["education"])-3)+(as.numeric(x["iq"])-100)/10)) 
+test.data$iq[sample(c(1:500),100)]<-NA
+test.data$height[sample(c(1:500),100)]<-NA
+test.data$sex[sample(c(1:500),100)]<-NA
+test.data$education[sample(c(1:500),100)]<-NA
+test.data$grade<-grade
+print(str(test.data))
+```
+
+Let's check the distribution of grades:
+
+```{r,echo=T,cache=F}
+print(hist(test.data$grade))
+```
+
+For instance, let's check the relation between grade and iq
+```{r,echo=T,cache=F}
+plot(grade~iq,data=test.data)
+```
+
+We can get a correlation values from this, for instance
+```{r,echo=T}
+correlation<-cor(test.data$grade,test.data$iq,use="complete.obs")
+print(correlation)
+```
+
+The question is then: how much would variation would have been if we had observed the missing data?
+
+A very reasonable assumption is that, other things being equal, the distribution of the values in the missing cells corresponds to. Let's define a small function that does this:
+
+```{r,echo=T,cache=T}
+boot.md<-function(x) {
+x[is.na(x)]<-sample(x[!is.na(x)],length(x[is.na(x)]))  
+return(x)}
+```
+
+Instead of sampling one time, we should produce multiple imputations and 
+
+```{r,echo=T}
+icor<-rep(0,500)
+for(i in c(1:500)) {
+iiq<-boot.md(test.data$iq)
+icor[i]<-cor(iiq,test.data$grade,use="complete.obs")}
+```
+
+Now we can see the values of these imputed datasets:
+
+```{r,echo=T}
+hist(icor)
+```
+
+Naturally, the correlations are smaller because we introduced unstructered data!

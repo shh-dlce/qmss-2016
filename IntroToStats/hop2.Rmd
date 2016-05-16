@@ -1,0 +1,42 @@
+---
+title: 'Hour of power: data mining'
+output: html_document
+---
+
+This is a basic example of data mining on a dataset of nominal data. For this we will need the package arules, and we'll load a database with several variables for adults.
+
+```{r,echo=T,warning=F,cache=F}
+require(arules)
+data("Groceries")
+inspect(head(Groceries, 1))
+```
+
+We can take a look at how items are similar to each other and plot that in a hierarchical cluster fashion:
+
+```{r,echo=T,warning=F}
+d_jaccard <- dissimilarity(Groceries[,itemFrequency(Groceries)>0.05], which = "items")
+plot(hclust(d_jaccard, method = "ward"))
+```
+
+Now let's mine rules with the apriori algorithm
+
+```{r,echo=T,warning=F}
+rules <- apriori(Groceries,
+parameter = list(supp = 0.05, conf = 0.2, target = "rules"))
+summary(rules)
+```
+
+We'll keep only those significant rules - those that show patterns that cannot be explained by chance:
+
+```{r,echo=T,warning=F}
+is.significant(rules, Groceries)
+inspect(rules[is.significant(rules, Groceries)])
+```
+
+Do you have any data frame you would like to convert into transactions? Do as follows
+
+```{r,echo=T}
+# your.data.tr<-as(your.data,"transactions")
+```
+
+

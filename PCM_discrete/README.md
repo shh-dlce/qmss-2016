@@ -2,9 +2,9 @@
 
 Theory and Background  
 - The lecture presentation for Fiona's PCM session is in the QMSS folder "lecture_slides"  
-- You should have followed the Phylogenetic Inference / Tree-building materials from Simon Greenhill before going through these materials.
+- You should have followed the Phylogenetic Inference / Tree-building materials from Simon Greenhill before going through these materials.  
 - You should go through these materials before moving on to Annemarie Verkerk's PCM for Continuous Character Data.  
-- 
+ 
 Practical session  
 - Files for Fiona's practical session are in /exercises  
 - Handbook for practical exercises is a pdf in this directory.  

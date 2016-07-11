@@ -18,9 +18,10 @@
 - Install git or GitHub Desktop and
 - if you know how, clone this repository
 
-## Tutorials
+## Tutorials  
+You will need to download these folders if you have not cloned the repository. Alternatively, we can provide them as a zipfile (email fiona.jordan@bristol.ac.uk).
 
-- [IntroToR](IntroToR/)
+- [IntroToR](IntroToR/) 
 - [IntroToStats](IntroToStats/)  
  
 ## Tutor Presentations and Materials  
@@ -39,3 +40,5 @@ All presentations are in the folder [talkSlides](talkSlides/)
 - Damian's [IntroToStats](IntroToStats/) tutorial  
 - Sean's presentation on [Quantitative Analyses](talkSlides/QMSS_Roberts.pdf)  
 - Damian's presentation on [Statistical Evidence](talkSlides/blasi.pdf)  
+
+### Chiara Barbieri

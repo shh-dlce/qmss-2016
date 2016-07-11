@@ -5,6 +5,7 @@
 
 - Please refer to the Handbook that we have sent you regarding how to navigate these materials.  
 - Not all tutors are able to be at the masterclass, but confirmed are  
+  - Robert Forkel (Databases and GutHub version control)  
   - Sean Roberts (statistical modelling)  
   - Chiara Barbieri (genetics)  
   - Simon Greenhill (phylogenetic inference)  

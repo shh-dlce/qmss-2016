@@ -18,14 +18,24 @@
 - Install git or GitHub Desktop and
 - if you know how, clone this repository
 
-## Initial Presentations
-
-- [Quantitative Methods and Software Development](quantitative-methods-and-sw-dev.pdf)
-- [Version Control with git](version-control-with-git.pdf)
-
 ## Tutorials
 
 - [IntroToR](IntroToR/)
 - [IntroToStats](IntroToStats/)  
-- [Textual data](textual_data/README.md)
-- [SQL databases](relational_databases/README.md)
+ 
+## Tutor Presentations and Materials  
+All presentations are in the folder [talkSlides](talkSlides/)
+
+### Robert Forkel
+- [Quantitative Methods and Software Development](quantitative-methods-and-sw-dev.pdf)
+- [Version Control with git](version-control-with-git.pdf)
+- Other materials available in the folders "relational_databases", "textual_data", and "example_paper"  
+- Tutorials:
+  - [Textual data](textual_data/README.md)  
+  - [SQL databases](relational_databases/README.md)  
+
+### Sean Roberts & Damian Blasi
+- Sean's [IntroToR](IntroToR/) tutorial
+- Damian's [IntroToStats](IntroToStats/) tutorial  
+- Sean's presentation on [Quantitative Analyses](talkSlides/QMSS_Roberts.pdf)  
+- Damian's presentation on [Statistical Evidence](talkSlides/blasi.pdf)  

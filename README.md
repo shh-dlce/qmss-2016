@@ -19,10 +19,10 @@
 - if you know how, clone this repository
 
 ## Tutorials  
-You will need to download these folders if you have not cloned the repository. Alternatively, we can provide them as a zipfile (email fiona.jordan@bristol.ac.uk).
+You will need to download the zipfile if you have not cloned the repository. 
 
-- [IntroToR](IntroToR/) 
-- [IntroToStats](IntroToStats/)  
+- [IntroToR](IntroToR/) [zipfile](IntroToR/QMSS_IntroToR.zip)
+- [IntroToStats](IntroToStats/)  [zipfile](IntroToStats/QMSS_IntroToStats.zip)
  
 ## Tutor Presentations and Materials  
 All presentations are in the folder [talkSlides](talkSlides/)

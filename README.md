@@ -48,6 +48,7 @@ Most presentations are in the folder [talkSlides](talkSlides/). Tutors have a "r
 ### Simon Greenhill
 - Simon's tutorial materials on phylogenetic inference using BEAST are in the folder [beast](beast)  
 - Simon's [presentation](beast/Lecture.pdf)  
+- A set of materials on [NeighborNet](neighbornet)
   
 ### Fiona Jordan
 - Fiona's tutorial materials on phylogenetic comparative methods are in the folder [PCM_discrete](PCM_discrete)  

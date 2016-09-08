@@ -1,0 +1,19 @@
+<itsabeastystatewerein version='2.0' sample='100000'>
+<statenode id='Tree.t:cpacific'>((((0:1.8703084588038135,3:1.8703084588038135)37:0.3934328648420682,(7:2.0648649978114877,15:2.0648649978114877)36:0.19887632583439396)35:0.36217331511427187,(10:0.2033514704460721,19:0.2033514704460721)24:2.4225631683140816)29:3.7537460993659564,((((1:0.6233510418432773,4:0.6233510418432773)27:1.631886695010138,(6:1.9467861974971774,9:1.9467861974971774)20:0.3084515393562379)28:0.8775364131812768,(11:1.0422184293867345,13:1.0422184293867345)32:2.0905557206479575)31:0.06564693799148191,((((2:0.06328955082176396,18:0.06328955082176396)33:1.170516129168325,14:1.233805679990089)22:0.2049213071778282,12:1.4387269871679171)26:0.20327439800307645,((5:0.3805350978797524,17:0.3805350978797524)25:0.1825547059979284,(8:0.4133239654631958,16:0.4133239654631958)30:0.14976583841448504)21:1.0789115812933128)34:1.5564197028551805)23:3.181239650099936)38:0.0</statenode>
+<statenode id='birthRate.t:cpacific'>birthRate.t:cpacific[1 1] (-Infinity,Infinity): 0.4291015489203501 </statenode>
+<statenode id='clockRate.c:cpacific'>clockRate.c:cpacific[1 1] (0.0,Infinity): 5.727435508645217E-7 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"YuleBirthRateScaler.t:cpacific","p":0.38938214505585383,"accept":1675,"reject":2019,"acceptFC":931,"rejectFC":1725,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelTreeScaler.t:cpacific","p":0.3471280240037474,"accept":1196,"reject":2499,"acceptFC":787,"rejectFC":1942,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelTreeRootScaler.t:cpacific","p":0.39197730218493393,"accept":680,"reject":3154,"acceptFC":477,"rejectFC":2323,"rejectIv":837,"rejectOp":837},
+{"id":"YuleModelUniformOperator.t:cpacific","p":"NaN","accept":30857,"reject":6237,"acceptFC":22492,"rejectFC":4429,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelSubtreeSlide.t:cpacific","p":13.00186199007773,"accept":8278,"reject":10142,"acceptFC":5791,"rejectFC":7599,"rejectIv":5065,"rejectOp":4741},
+{"id":"YuleModelNarrow.t:cpacific","p":"NaN","accept":12014,"reject":6392,"acceptFC":8855,"rejectFC":4610,"rejectIv":1102,"rejectOp":0},
+{"id":"YuleModelWide.t:cpacific","p":"NaN","accept":578,"reject":3124,"acceptFC":426,"rejectFC":2247,"rejectIv":2211,"rejectOp":1894},
+{"id":"YuleModelWilsonBalding.t:cpacific","p":"NaN","accept":738,"reject":2959,"acceptFC":558,"rejectFC":2124,"rejectIv":1048,"rejectOp":696},
+{"id":"StrictClockRateScaler.c:cpacific","p":0.23357870388361382,"accept":1938,"reject":1794,"acceptFC":1119,"rejectFC":1577,"rejectIv":0,"rejectOp":0},
+{"id":"strictClockUpDownOperator.c:cpacific","p":0.39967466969227033,"accept":1587,"reject":2140,"acceptFC":889,"rejectFC":1838,"rejectIv":0,"rejectOp":0}
+]}
+-->

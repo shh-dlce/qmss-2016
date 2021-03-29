@@ -2,7 +2,7 @@ flask>=0.12.3
 Jinja2==2.8
 Markdown==2.6.6
 MarkupSafe==0.23
-Pygments==2.1.3
+Pygments==2.7.4
 SQLAlchemy==1.0.12
 Werkzeug==0.11.9
 backports-abc==0.4
